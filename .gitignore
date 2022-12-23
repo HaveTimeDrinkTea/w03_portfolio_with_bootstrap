@@ -1,3 +1,6 @@
+# remove unwanted files
+**/.DS_Store
+
 # Logs
 logs
 *.log
