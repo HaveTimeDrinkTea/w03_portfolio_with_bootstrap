@@ -1,6 +1,11 @@
 <html>
 <head>
     <style>
+:root {
+    --steamYes:#666666;
+    --steamNo: #666666;;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -167,7 +172,14 @@ body {
     z-index: 1;
     padding: 0 20px;
 }
-.container .cup .top .vapour span {
+
+
+
+.container .cup .top .parent .vapour span {
+    display: none;
+}
+
+.container .cup .top .parent:hover .vapour span {
     position: relative;
     bottom: 50px;
     display: block;
@@ -181,6 +193,8 @@ body {
     filter: blur(8px);
     animation-delay: calc(var(--i) * -0.5s);
 }
+
+
 @keyframes animateVapour {
     0% {
         transform: translateY(0) scaleX(1);
@@ -201,20 +215,118 @@ body {
 }
 
 
+/* gaiwan pattern */
+.planet{
+  height:200px;
+  width:200px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #ff9933;
+  top:45px;
+  left:220px;
+}
+.r1{
+  background-color: #ffbf80;
+  height:20px;
+  width:110px;
+  border-radius:10px;
+  position: relative;
+  top:60px;
+  left:85px;
+}
+.r2{
+  background-color: #ffbf80;
+  height: 15px;
+  width:90px;
+  border-radius:6.5px;
+  position: relative;
+  top:80px;
+  left:110px;
+}
+.r3{
+  background-color: #ffbf80;
+  height:30px;
+  width:120px;
+  border-radius: 15px;
+  position: relative;
+  top:78px;
+  left:50px;
+}
+.r4{
+  background-color: #ffbf80;
+  height:22px;
+  width:90px;
+  border-radius:11px;
+  position: relative;
+  top:70px;
+  left:12px;
+}
+.r5{
+  background-color: rgba(204, 102, 0,0.3);
+  height:15px;
+  width:40px;
+  border-radius:7.5px;
+  position: relative;
+  bottom:50px;
+  left:70px;
+}
+.r6{
+  background-color: rgba(204, 102, 0,0.3);
+  height:20px;
+  width:60px;
+  border-radius:11px;
+  position: relative;
+  bottom:25px;
+  left:10px;
+}
+.r7{
+  background-color: rgba(204, 102, 0,0.3);
+  height:15px;
+  width:45px;
+  border-radius:7.5px;
+  position: relative;
+  top:40px;
+  left:130px;
+}
+.r8{
+  background-color: rgba(255,255,255,0.4);
+  height:12px;
+  width:30px;
+  border-radius:7.5px;
+  position: relative;
+  top:7px;
+  left:32px;
+}
 
     </style>
 </head>
 <body>
-
+    <section>
+        <h1><a href="#!"></a></h1>
+    </section>
     <div class="container">
-       
+        
         <div class="saucer"></div>
+        <div class="planet">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+            <div class="r8"></div>
+            <div class="shad"></div>
+        </div>
         <div class="cup">
             <div class="top">
                 <div class="moveLid">
-                <div class="lidknob"></div>               
-                <div class="lid"></div>
-            </div>
+                    <div class="lidknob"></div>               
+                    <div class="lid"></div>
+                </div>
+                
+            <div class="parent">
+                this is a text
                 <div class="vapour">
                     <span style="--i:1;"></span>
                     <span style="--i:3;"></span>
@@ -222,12 +334,12 @@ body {
                     <span style="--i:5;"></span>
                     <span style="--i:13;"></span>
                     <span style="--i:20;"></span>
-                    <span style="--i:6;"></span>
+                    <!-- <span style="--i:6;"></span>
                     <span style="--i:18;"></span>
                     <span style="--i:7;"></span>
                     <span style="--i:10;"></span>
-                    <span style="--i:8;"></span>
-                    <span style="--i:17;"></span>
+                    <span style="--i:8;"></span> -->
+                    <!-- <span style="--i:17;"></span>
                     <span style="--i:11;"></span>
                     <span style="--i:12;"></span>
                     <span style="--i:14;"></span>
@@ -235,10 +347,12 @@ body {
                     <span style="--i:9;"></span>
                     <span style="--i:15;"></span>
                     <span style="--i:4;"></span>
-                    <span style="--i:19;"></span>
+                    <span style="--i:19;"></span> -->
                 </div>
+            </div>
                 <div class="circle">
-            <div class="tea"></div>
+
+                    <div class="tea"></div>
                 </div>
             </div>
         </div>
