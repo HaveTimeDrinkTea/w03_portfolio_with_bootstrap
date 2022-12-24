@@ -55,30 +55,54 @@ body {
     border-radius: 50%;
 }
 
-
+.moveLid {
+    animation-name: animateLid;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    bottom: 40px;
+    left: 40px;
+}
+@keyframes animateLid{
+    50%{
+    transform: translateY(50px);
+}
+}
 
 
 
 .container .lidknob {
     position: absolute;
-    top: -130px;
+    top: -110px;
     left: 50%;
-    transform: translateX(-50%);
-    width: 70px;
+    transform: translateX(-40%) rotate(10deg);
+    width: 60px;
     height: 50px;
     background: linear-gradient(to left, #f9f9f9, #e7e7e7);
-    border-radius: 50%;
+    border-radius: 41%;
     box-shadow: 0 -35px -35px rgba(0, 0, 0, 0.2);
+}
+
+.container .lidknob::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 1px;
+    bottom: 6px;
+    left: 5px;
+    transform: skewY(0.5deg);
+    border-radius: 41%;
+    background: linear-gradient(to right, #f9f9f9, #d9d0d0);
 }
 
 .container .lid {
     position: absolute;
-    top: -110px;
+    top: -85px;
     left: 50%;
     transform: translateX(-50%) rotate(10deg);
     width: 300px;
     height: 80px;
-    background: linear-gradient(to right, #f9f9f9, #e7e7e7);
+    background: linear-gradient(to right, #f9f9f9, #d9d0d0);
     border-radius: 50%;
     box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
 }
@@ -91,7 +115,7 @@ body {
     left: 12px;
     transform: skewY(0.5deg);
     border-radius: 50%;
-    background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+    background: linear-gradient(to left, #f9f9f9, #d9d0d0);
 }
 .container .lid::after {
     content: '';
@@ -100,7 +124,7 @@ body {
     right: 30px;
     bottom: 30px;
     left: 30px;
-    background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+    background: linear-gradient(to left, #f9f9f9, #d9d0d0);
     border-radius: 100%;
 }
 
@@ -152,12 +176,12 @@ body {
     height: 120px;
     background: #fff;
     border-radius: 50%;
-    animation: animate 5s linear infinite;
+    animation: animateVapour 5s linear infinite;
     opacity: 0;
     filter: blur(8px);
     animation-delay: calc(var(--i) * -0.5s);
 }
-@keyframes animate {
+@keyframes animateVapour {
     0% {
         transform: translateY(0) scaleX(1);
         opacity: 0;
@@ -187,9 +211,10 @@ body {
         <div class="saucer"></div>
         <div class="cup">
             <div class="top">
+                <div class="moveLid">
                 <div class="lidknob"></div>               
                 <div class="lid"></div>
-
+            </div>
                 <div class="vapour">
                     <span style="--i:1;"></span>
                     <span style="--i:3;"></span>
