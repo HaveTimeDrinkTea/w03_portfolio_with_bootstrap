@@ -1,5 +1,25 @@
 <html>
 <head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <!-- Custom fonts for this template -->
+  <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
+  <script src="https://kit.fontawesome.com/72c3290151.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+   <!-- Bootstrap CSS -->
+
+   <link rel="icon" type="image/x-icon" href="assets/image/favicon.ico" />
+
     <style>
 :root {
     --steamYes:#666666;
@@ -18,11 +38,149 @@ body {
     min-height: 100vh;
     background: #607d8b;
 }
-.container {
+
+/* CSS for gaiwan & animations  */
+
+
+/* ##Gaiwan (A) saucer  */
+.container_gaiwan .saucer {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 150px;
+    background: linear-gradient(to right, #f9f9f9, #e7e7e7);
+    border-radius: 50%;
+    box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+}
+
+.container_gaiwan .saucer::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+}
+
+.container_gaiwan .saucer::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
+    border-radius: 50%;
+}
+
+
+/* ##Gaiwan (B) pattern gaiwan tea cup  */
+
+.gaiwanPattern {
+    position: relative;
+    top: 12vh;
+    right: 18vh;
+    z-index: 10;
+    transform: skew(10deg, -6deg) scale(0.7, 0.7);
+}
+
+.patternMoon {
+  height: 10vh; 
+  width: 10vh; 
+  border-radius: 50%;
+  position: relative;
+  background-color: #ff9933;
+  top: 4.5vh; 
+  left: 32vw; 
+} 
+.r1 {
+  background-color: #ffbf80;
+  height: 2vh; 
+  width: 11vw;
+  border-radius: 1vw; 
+  position: relative;
+  top: 6vh; 
+  left: 8.5vw; 
+}
+.r2{
+  background-color: #ffbf80;
+  height: 1.5vh; 
+  width: 9vw; 
+  border-radius: 0.65vh; 
+  position: relative;
+  top: 8vh; 
+  left: 11vw; 
+}
+.r3{
+  background-color: #ffbf80;
+  height: 3vh; 
+  width: 12vw; 
+  border-radius: 1.5vh; 
+  position: relative;
+  top: 7.8vh; 
+  left: 5vw; 
+}
+.r4{
+  background-color: #ffbf80;
+  height: 2.2vh; 
+  width: 9vw; 
+  border-radius: 1.1vh;
+  position: relative;
+  top: 7vh; 
+  left: 1.2vw; 
+}
+.r5{
+  background-color: rgba(204, 102, 0,0.3);
+  height: 1.5vh; 
+  width: 4vw; 
+  border-radius: 0.75vh; 
+  position: relative;
+  bottom: 5vh; 
+  left: 7vw; 
+}
+.r6{
+  background-color: rgba(204, 102, 0,0.3);
+  height: 2vh;
+  width: 6vw;
+  border-radius: 1.1vh;
+  position: relative;
+  bottom: 2.5vh;
+  left: 1vw;
+}
+.r7{
+  background-color: rgba(204, 102, 0,0.3);
+  height: 1.5vh;
+  width: 4.5vw;
+  border-radius: 0.75vh;
+  position: relative;
+  top: 4vh;
+  left: 13vw;
+}
+.r8{
+  background-color: rgba(255,255,255,0.4);
+  height: 1.2vh;
+  width: 3vw;
+  border-radius: 0.75vh;
+  position: relative;
+  top: 0.7vh;
+  left: 3.2vw;
+}
+
+
+
+
+/* ##Gaiwan (C) gaiwan with lid and animation  */
+ 
+.container_gaiwan {
     position: relative;
     top: 50px;
 }
-.container .cup {
+
+.container_gaiwan .gaiwan {
     position: relative;
     width: 280px;
     height: 230px;
@@ -30,35 +188,9 @@ body {
     border-bottom-left-radius: 85%;
     border-bottom-right-radius: 85%;
 }
-.container .cup .top {
-    position: absolute;
-    top: -30px;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to right, #f9f9f9, #d9d9d9);
-    border-radius: 50%;
-}
-.container .cup .top .circle {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    width: calc(100% - 20px);
-    height: 50px;
-    background: linear-gradient(to left, #f9f9f9, #d9d9d9);
-    border-radius: 50%;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-.container .cup .top .circle .tea {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(228, 239, 129), #8dae54);
-    border-radius: 50%;
-}
+
+/* ##Gaiwan (C.1) lid, lidknob and animation  */
+
 
 .moveLid {
     animation-name: animateLid;
@@ -70,13 +202,14 @@ body {
 }
 @keyframes animateLid{
     50%{
-    transform: translateY(50px);
+    transform: translateY(50px); /*50px*/
 }
 }
 
 
+/* ###Gaiwan (C.1.1) lid knob  */
 
-.container .lidknob {
+.container_gaiwan .lidknob {
     position: absolute;
     top: -110px;
     left: 50%;
@@ -88,7 +221,7 @@ body {
     box-shadow: 0 -35px -35px rgba(0, 0, 0, 0.2);
 }
 
-.container .lidknob::before {
+.container_gaiwan .lidknob::before {
     content: '';
     position: absolute;
     top: 4px;
@@ -100,7 +233,19 @@ body {
     background: linear-gradient(to right, #f9f9f9, #d9d0d0);
 }
 
-.container .lid {
+/* ###Gaiwan (C.1.2) lid   */
+
+.container_gaiwan .gaiwan .gaiwanLidSteamTea {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+    border-radius: 50%;
+}
+
+.container_gaiwan .lid {
     position: absolute;
     top: -85px;
     left: 50%;
@@ -111,7 +256,8 @@ body {
     border-radius: 50%;
     box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
 }
-.container .lid::before {
+
+.container_gaiwan .lid::before {
     content: '';
     position: absolute;
     top: 14px;
@@ -122,7 +268,8 @@ body {
     border-radius: 50%;
     background: linear-gradient(to left, #f9f9f9, #d9d0d0);
 }
-.container .lid::after {
+
+.container_gaiwan .lid::after {
     content: '';
     position: absolute;
     top: 30px;
@@ -134,52 +281,16 @@ body {
 }
 
 
-.container .saucer {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    height: 150px;
-    background: linear-gradient(to right, #f9f9f9, #e7e7e7);
-    border-radius: 50%;
-    box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
-}
-.container .saucer::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
-    border-radius: 50%;
-    background: linear-gradient(to left, #f9f9f9, #e7e7e7);
-}
-.container .saucer::after {
-    content: '';
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: 30px;
-    left: 30px;
-    background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
-    border-radius: 50%;
-}
+/* ##Gaiwan (C.2) steam from gaiwan */
 
-.container .cup .top .vapour {
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .steam {
     position: relative;
     display: flex;
     z-index: 1;
     padding: 0 20px;
 }
 
-
-
-.container .cup .top .parent .vapour span {
-    display: none;
-}
-
-.container .cup .top .parent:hover .vapour span {
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanTeaStream .steam span {
     position: relative;
     bottom: 50px;
     display: block;
@@ -188,14 +299,17 @@ body {
     height: 120px;
     background: #fff;
     border-radius: 50%;
-    animation: animateVapour 5s linear infinite;
+    animation: animateSteam 5s linear infinite;
     opacity: 0;
     filter: blur(8px);
     animation-delay: calc(var(--i) * -0.5s);
 }
 
+/* .container_gaiwan .gaiwan .gaiwanLid .gaiwanTeaStream .steam span {
+    display: none;
+} */
 
-@keyframes animateVapour {
+@keyframes animateSteam {
     0% {
         transform: translateY(0) scaleX(1);
         opacity: 0;
@@ -215,149 +329,110 @@ body {
 }
 
 
-/* gaiwan pattern */
-.planet{
-  height:200px;
-  width:200px;
-  border-radius: 50%;
-  position: relative;
-  background-color: #ff9933;
-  top:45px;
-  left:220px;
+
+/* ##Gaiwan (C.3) tea liquid inside gaiwan */
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanopening {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 50px;
+    background: linear-gradient(to left, #f9f9f9, #d9d9d9);
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-.r1{
-  background-color: #ffbf80;
-  height:20px;
-  width:110px;
-  border-radius:10px;
-  position: relative;
-  top:60px;
-  left:85px;
-}
-.r2{
-  background-color: #ffbf80;
-  height: 15px;
-  width:90px;
-  border-radius:6.5px;
-  position: relative;
-  top:80px;
-  left:110px;
-}
-.r3{
-  background-color: #ffbf80;
-  height:30px;
-  width:120px;
-  border-radius: 15px;
-  position: relative;
-  top:78px;
-  left:50px;
-}
-.r4{
-  background-color: #ffbf80;
-  height:22px;
-  width:90px;
-  border-radius:11px;
-  position: relative;
-  top:70px;
-  left:12px;
-}
-.r5{
-  background-color: rgba(204, 102, 0,0.3);
-  height:15px;
-  width:40px;
-  border-radius:7.5px;
-  position: relative;
-  bottom:50px;
-  left:70px;
-}
-.r6{
-  background-color: rgba(204, 102, 0,0.3);
-  height:20px;
-  width:60px;
-  border-radius:11px;
-  position: relative;
-  bottom:25px;
-  left:10px;
-}
-.r7{
-  background-color: rgba(204, 102, 0,0.3);
-  height:15px;
-  width:45px;
-  border-radius:7.5px;
-  position: relative;
-  top:40px;
-  left:130px;
-}
-.r8{
-  background-color: rgba(255,255,255,0.4);
-  height:12px;
-  width:30px;
-  border-radius:7.5px;
-  position: relative;
-  top:7px;
-  left:32px;
+
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanopening .tea {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(228, 239, 129), #8dae54);
+    border-radius: 50%;
 }
 
     </style>
 </head>
 <body>
-    <section>
-        <h1><a href="#!"></a></h1>
-    </section>
-    <div class="container">
-        
-        <div class="saucer"></div>
-        <div class="planet">
-            <div class="r1"></div>
-            <div class="r2"></div>
-            <div class="r3"></div>
-            <div class="r4"></div>
-            <div class="r5"></div>
-            <div class="r6"></div>
-            <div class="r7"></div>
-            <div class="r8"></div>
-            <div class="shad"></div>
-        </div>
-        <div class="cup">
-            <div class="top">
-                <div class="moveLid">
-                    <div class="lidknob"></div>               
-                    <div class="lid"></div>
-                </div>
-                
-            <div class="parent">
-                this is a text
-                <div class="vapour">
-                    <span style="--i:1;"></span>
-                    <span style="--i:3;"></span>
-                    <span style="--i:16;"></span>
-                    <span style="--i:5;"></span>
-                    <span style="--i:13;"></span>
-                    <span style="--i:20;"></span>
-                    <!-- <span style="--i:6;"></span>
-                    <span style="--i:18;"></span>
-                    <span style="--i:7;"></span>
-                    <span style="--i:10;"></span>
-                    <span style="--i:8;"></span> -->
-                    <!-- <span style="--i:17;"></span>
-                    <span style="--i:11;"></span>
-                    <span style="--i:12;"></span>
-                    <span style="--i:14;"></span>
-                    <span style="--i:2;"></span>
-                    <span style="--i:9;"></span>
-                    <span style="--i:15;"></span>
-                    <span style="--i:4;"></span>
-                    <span style="--i:19;"></span> -->
-                </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container2" id="container2"> 
+              <a class="navbar-brand js-scroll-trigger" href="#page-top">Travel Califonia</a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu <i class="fas fa-hamburger"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto" id="navbarul">
+                  <li class="nav-item" id="navbarli">
+                    <a class="nav-link js-scroll-trigger" href="#download">DOWNLOAD</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#features">FEATURES</a>
+                  </li>
+                  <li class="nav-item js-scroll-trigger">
+                    <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-                <div class="circle">
+          </nav>
 
-                    <div class="tea"></div>
+       
+
+    <div class="container_gaiwan">
+        <div class="saucer">
+        </div>
+        <!-- <div class="gaiwanPattern">
+            <div class="patternMoon">
+                <div class="r1"></div>
+                <div class="r2"></div>
+                <div class="r3"></div>
+                <div class="r4"></div>
+                <div class="r5"></div>
+                <div class="r6"></div>
+                <div class="r7"></div>
+                <div class="r8"></div>
+                <div class="shad"></div>
+            </div>
+        </div> -->
+        <div class="gaiwan">
+            <div class="gaiwanLidSteamTea">
+                <div class="moveLid">
+                    <div class="lidknob">
+                    </div>               
+                    <div class="lid">
+                    </div>
+                </div>
+                <div class="gaiwanTeaStream">
+                    <div class="steam">
+                        <span style="--i:1;"></span>
+                        <span style="--i:3;"></span>
+                        <span style="--i:16;"></span>
+                        <span style="--i:5;"></span>
+                        <span style="--i:20;"></span>
+                    </div>
+                </div>
+                <div class="gaiwanopening">
+                    <div class="tea">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 
+</header>
+<!-- <main>
+    this is inside main
+</main>
+<footer> 
+    this is inside footer
+</footer> -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

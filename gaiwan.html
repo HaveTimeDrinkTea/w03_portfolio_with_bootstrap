@@ -120,6 +120,7 @@ body {
     border-radius: 50%;
     background: linear-gradient(to left, #f9f9f9, #d9d0d0);
 }
+
 .container .lid::after {
     content: '';
     position: absolute;
@@ -143,6 +144,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
 }
+
 .container .saucer::before {
     content: '';
     position: absolute;
@@ -153,6 +155,7 @@ body {
     border-radius: 50%;
     background: linear-gradient(to left, #f9f9f9, #e7e7e7);
 }
+
 .container .saucer::after {
     content: '';
     position: absolute;
@@ -170,6 +173,7 @@ body {
     z-index: 1;
     padding: 0 20px;
 }
+
 .container .cup .top .vapour span {
     position: relative;
     bottom: 50px;
@@ -210,14 +214,16 @@ body {
 <body>
 
     <div class="container">
-       
-        <div class="saucer"></div>
+        <div class="saucer">
+        </div>
         <div class="cup">
             <div class="top">
                 <div class="moveLid">
-                <div class="lidknob"></div>               
-                <div class="lid"></div>
-            </div>
+                    <div class="lidknob">
+                    </div>               
+                    <div class="lid">
+                    </div>
+                </div>
                 <div class="vapour">
                     <span style="--i:1;"></span>
                     <span style="--i:3;"></span>
@@ -241,7 +247,8 @@ body {
                     <span style="--i:19;"></span>
                 </div>
                 <div class="circle">
-            <div class="tea"></div>
+                    <div class="tea">
+                    </div>
                 </div>
             </div>
         </div>
