@@ -1,6 +1,29 @@
 /* ============================= 
+0. CSS Variables 
+============================= */
+:root {
+  --bgcolor:#607d8b;
+  --bgcolordark: #313138;
+  --bgcolorlight: #edc9c9;
+  --color1: #fcbc3c;
+  --color2: #f4f491;
+  --color3: #548434;
+  --color4: #a45c84;
+  --color5: #c4be81;
+  --color6: #54402c;
+  --color7: #023F92;
+  --color8: #5318a0;
+  --color9: #26b89d;
+  --color10: #ff9933;
+  --color11: #ffbf80;
+  --fontvintage: #e0eae4;
+  --proj-nonselect: #5318a0;
+}
+
+/* ============================= 
 1. Global styles 
 ============================= */
+
 html,
 body {
   width: 100%;
@@ -57,6 +80,404 @@ section h2 {
 }
 
 
+
+
+
+
+
+
 /* ============================= 
-2. Hero Header
+2. Hero Header and Nav 
 ============================= */
+
+/* 1.2 Navigation ============= */
+
+#mainNav {
+  border-color: rgba(34, 34, 34, 0.05);
+  background-color:#64a19d !important;
+  transition: all .35s;
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+} 
+
+#mainNav .navbar-brand {
+  color: #fdcc52;
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+  color: #fcbd20;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  padding: 8px 10px;
+  color: #222222;
+}
+
+#mainNav .navbar-nav > li > a {
+  font-size: 11px;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#mainNav .navbar-nav > li > a.active {
+  color: #fdcc52 !important;
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav > li > a.active:hover {
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav > li > a,
+#mainNav .navbar-nav > li > a:focus {
+  color: #222222;
+}
+
+#mainNav .navbar-nav > li > a:hover,
+#mainNav .navbar-nav > li > a:focus:hover {
+  color: #fdcc52;
+}
+
+/* 2.2 Hero header ============= */
+header.masthead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: var(--fontvintage);
+  background-color: var(--bgcolor);
+}
+
+header.masthead .header-content {
+  max-width: 500px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+header.masthead .header-content h1 {
+  font-size: 30px;
+}
+
+header.masthead .device-container {
+  max-width: 325px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header.masthead .device-container .screen img {
+  border-radius: 3px;
+}
+
+
+/* 2.3 Gaiwan and animations ============= */
+/* CSS for gaiwan & animations  */
+.container_gaiwan {
+  position: relative;
+  top: 10vh;
+  max-width: 40vw;
+  max-height: 40vh;
+}
+
+/* ##Gaiwan (A) saucer  */
+.container_gaiwan .saucer {
+  position: relative;
+  bottom: -200px;
+  right: -230px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 75px;
+  background: linear-gradient(to right, #f9f9f9, #e7e7e7);
+  border-radius: 50%;
+  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+}
+
+.container_gaiwan .saucer::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+  z-index: 2;
+}
+
+.container_gaiwan .saucer::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* ##Gaiwan (B) gaiwan with lid and animation  */
+
+
+.container_gaiwan .gaiwan {
+  position: relative;
+  top: 60px;
+  right: -160px;
+  width: 140px;
+  height: 115px;
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-bottom-left-radius: 85%;
+  border-bottom-right-radius: 85%;
+}
+
+/* ##Gaiwan (B.1) lid, lidknob and animation  */
+
+.container_gaiwan .gaiwan .gaiwanLidSteamTea {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+}
+
+.moveLid {
+  animation-name: animateLid;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: relative;
+  bottom: 40%;
+  left: 40%;
+}
+@keyframes animateLid{
+  50%{
+  transform: translateY(50px); /*50px*/
+}
+}
+
+
+/* ###Gaiwan (B.1.1) lid knob  */
+
+.container_gaiwan .lidknob {
+  position: absolute;
+  top: -80px;
+  right: 65px;
+  transform: translateX(-40%) rotate(10deg);
+  width: 35px;
+  height: 25px;
+  background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+  border-radius: 41%;
+  box-shadow: 0 -35px -35px rgba(0, 0, 0, 0.2);
+}
+
+.container_gaiwan .lidknob::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0.5px;
+  bottom: 3px;
+  left: 2.5px;
+  transform: skewY(0.5deg);
+  border-radius: 41%;
+  background: linear-gradient(to right, #f9f9f9, #d9d0d0);
+}
+
+/* ###Gaiwan (B.1.2) lid   */
+
+
+
+.container_gaiwan .lid {
+  position: absolute;
+  top: -65px;
+  right: -40px;
+  transform: translateX(-50%) rotate(10deg);
+  width: 140px;
+  height: 45px;
+  background: linear-gradient(to right, #f9f9f9, #d9d0d0);
+  border-radius: 50%;
+  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+}
+
+.container_gaiwan .lid::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 3px;
+  bottom: 3px;
+  left: 6px;
+  transform: skewY(0.5deg);
+  border-radius: 50%;
+  background: linear-gradient(to left, #f9f9f9, #d9d0d0);
+}
+
+.container_gaiwan .lid::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  background: linear-gradient(to left, #f9f9f9, #d9d0d0);
+  border-radius: 100%;
+}
+
+
+/* ##Gaiwan (B.2) steam from gaiwan */
+
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .steam {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanTeaStream .steam span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  animation: animateSteam 5s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  animation-delay: calc(var(--x) * -0.5s);
+}
+
+/* .container_gaiwan .gaiwan .gaiwanLid .gaiwanTeaStream .steam span {
+  display: none;
+} */
+
+@keyframes animateSteam {
+  0% {
+      transform: translateY(0) scaleX(1);
+      opacity: 0;
+  }
+  15% {
+      opacity: 1;
+  }
+  50% {
+      transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(-300px) scaleX(10);
+  }
+}
+
+
+/* ##Gaiwan (B.3) tea liquid inside gaiwan */
+
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanopening {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 50px;
+  background: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanopening .tea {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(228, 239, 129), #8dae54);
+  border-radius: 50%;
+}
+/* ##Gaiwan (C) pattern gaiwan tea cup  */
+
+.gaiwanPattern {
+  position: relative;
+  top: 130px;
+  right: 170px;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  transform: skew(10deg, -8deg);
+}
+
+.patternMoon {
+height: 30px; 
+width: 30px; 
+border-radius: 50%;
+position: relative;
+background-color: var(--color10);
+top: -70px; 
+right: -200px; 
+} 
+
+.patternStar {
+height: 15px; 
+width: 15px; 
+border-radius: 50%;
+position: relative;
+background-color: var(--color10);
+top: -10px; 
+right: -80px; 
+} 
+
+.cloud1 {
+background-color: var(--color11);
+height: 10px; 
+width: 70px;
+border-radius: 10px; 
+position: relative;
+top: 25px; 
+left: 25px; 
+}
+
+.cloud2 {
+background-color: var(--color11);
+height: 10px; 
+width: 60px; 
+border-radius: 6.5px; 
+position: relative;
+top: 30px; 
+left: 10px; 
+}
+
+.cloud3 {
+background-color: rgba(204, 102, 0,0.3);
+height: 15px;
+width: 60px;
+border-radius: 11px;
+position: relative;
+top: -10px;
+left: 20px;
+}
+
+.cloud4 {
+background-color: rgba(204, 102, 0,0.3);
+height: 15px; 
+width: 40px; 
+border-radius: 7.5px; 
+position: relative;
+top: 5px; 
+left: 60px; 
+}
+
+
+.cloud5 {
+background-color: rgba(255,255,255,0.4);
+height: 12px;
+width: 30px;
+border-radius: 7.5px;
+position: relative;
+top: -30px;
+left: 40px;
+}

@@ -21,9 +21,61 @@
    <link rel="icon" type="image/x-icon" href="assets/image/favicon.ico" />
 
     <style>
+
+        /* color scheme sourced from http://khroma.co/generator/ */
 :root {
-    --steamYes:#666666;
-    --steamNo: #666666;;
+    --bgcolor:#607d8b;
+    --bgcolordark:#313138;
+    --bgcolorlight: #edc9c9;
+    --color1: #fcbc3c;
+    --color2: #f4f491;
+    --color3: #548434;
+    --color4: #a45c84;
+    --color5: #c4be81;
+    --color6: #54402c;
+    --color7: #023F92;
+    --color8: #5318a0;
+    --color9: #26b89d;
+    --color10: #ff9933;
+    --color11: #ffbf80;
+    --fontvintage: #e0eae4;
+    --proj-nonselect: #5318a0;
+  }
+
+
+  header.masthead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+  background: url("../images/bg-img.svg");
+}
+
+header.masthead .header-content {
+  max-width: 500px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+header.masthead .header-content h1 {
+  font-size: 30px;
+}
+
+header.masthead .device-container {
+  max-width: 325px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header.masthead .device-container .screen img {
+  border-radius: 3px;
+}
+
+  /* set content highlight color and background */
+  ::selection {
+    background-color: var(--color5);
+    color: var(--color6);
   }
 
 *{
@@ -40,16 +92,21 @@ body {
 }
 
 /* CSS for gaiwan & animations  */
-
+.container_gaiwan {
+    position: relative;
+    top: 10vh;
+    max-width: 40vw;
+    max-height: 40vh;
+}
 
 /* ##Gaiwan (A) saucer  */
 .container_gaiwan .saucer {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
+    position: relative;
+    bottom: -200px;
+    right: -230px;
     transform: translateX(-50%);
-    width: 400px;
-    height: 150px;
+    width: 200px;
+    height: 75px;
     background: linear-gradient(to right, #f9f9f9, #e7e7e7);
     border-radius: 50%;
     box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
@@ -58,182 +115,42 @@ body {
 .container_gaiwan .saucer::before {
     content: '';
     position: absolute;
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
     border-radius: 50%;
     background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+    z-index: 2;
 }
 
 .container_gaiwan .saucer::after {
     content: '';
     position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: 30px;
-    left: 30px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
     background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
     border-radius: 50%;
+    z-index: 2;
 }
 
+/* ##Gaiwan (B) gaiwan with lid and animation  */
 
-/* ##Gaiwan (B) pattern gaiwan tea cup  */
-
-.gaiwanPattern {
-    position: relative;
-    top: 12vh;
-    right: 18vh;
-    z-index: 10;
-    transform: skew(10deg, -6deg) scale(0.7, 0.7);
-}
-
-.patternMoon {
-  height: 10vh; 
-  width: 10vh; 
-  border-radius: 50%;
-  position: relative;
-  background-color: #ff9933;
-  top: 4.5vh; 
-  left: 32vw; 
-} 
-.r1 {
-  background-color: #ffbf80;
-  height: 2vh; 
-  width: 11vw;
-  border-radius: 1vw; 
-  position: relative;
-  top: 6vh; 
-  left: 8.5vw; 
-}
-.r2{
-  background-color: #ffbf80;
-  height: 1.5vh; 
-  width: 9vw; 
-  border-radius: 0.65vh; 
-  position: relative;
-  top: 8vh; 
-  left: 11vw; 
-}
-.r3{
-  background-color: #ffbf80;
-  height: 3vh; 
-  width: 12vw; 
-  border-radius: 1.5vh; 
-  position: relative;
-  top: 7.8vh; 
-  left: 5vw; 
-}
-.r4{
-  background-color: #ffbf80;
-  height: 2.2vh; 
-  width: 9vw; 
-  border-radius: 1.1vh;
-  position: relative;
-  top: 7vh; 
-  left: 1.2vw; 
-}
-.r5{
-  background-color: rgba(204, 102, 0,0.3);
-  height: 1.5vh; 
-  width: 4vw; 
-  border-radius: 0.75vh; 
-  position: relative;
-  bottom: 5vh; 
-  left: 7vw; 
-}
-.r6{
-  background-color: rgba(204, 102, 0,0.3);
-  height: 2vh;
-  width: 6vw;
-  border-radius: 1.1vh;
-  position: relative;
-  bottom: 2.5vh;
-  left: 1vw;
-}
-.r7{
-  background-color: rgba(204, 102, 0,0.3);
-  height: 1.5vh;
-  width: 4.5vw;
-  border-radius: 0.75vh;
-  position: relative;
-  top: 4vh;
-  left: 13vw;
-}
-.r8{
-  background-color: rgba(255,255,255,0.4);
-  height: 1.2vh;
-  width: 3vw;
-  border-radius: 0.75vh;
-  position: relative;
-  top: 0.7vh;
-  left: 3.2vw;
-}
-
-
-
-
-/* ##Gaiwan (C) gaiwan with lid and animation  */
- 
-.container_gaiwan {
-    position: relative;
-    top: 50px;
-}
 
 .container_gaiwan .gaiwan {
     position: relative;
-    width: 280px;
-    height: 230px;
+    top: 60px;
+    right: -160px;
+    width: 140px;
+    height: 115px;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
     border-bottom-left-radius: 85%;
     border-bottom-right-radius: 85%;
 }
 
-/* ##Gaiwan (C.1) lid, lidknob and animation  */
-
-
-.moveLid {
-    animation-name: animateLid;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    position: relative;
-    bottom: 40px;
-    left: 40px;
-}
-@keyframes animateLid{
-    50%{
-    transform: translateY(50px); /*50px*/
-}
-}
-
-
-/* ###Gaiwan (C.1.1) lid knob  */
-
-.container_gaiwan .lidknob {
-    position: absolute;
-    top: -110px;
-    left: 50%;
-    transform: translateX(-40%) rotate(10deg);
-    width: 60px;
-    height: 50px;
-    background: linear-gradient(to left, #f9f9f9, #e7e7e7);
-    border-radius: 41%;
-    box-shadow: 0 -35px -35px rgba(0, 0, 0, 0.2);
-}
-
-.container_gaiwan .lidknob::before {
-    content: '';
-    position: absolute;
-    top: 4px;
-    right: 1px;
-    bottom: 6px;
-    left: 5px;
-    transform: skewY(0.5deg);
-    border-radius: 41%;
-    background: linear-gradient(to right, #f9f9f9, #d9d0d0);
-}
-
-/* ###Gaiwan (C.1.2) lid   */
+/* ##Gaiwan (B.1) lid, lidknob and animation  */
 
 .container_gaiwan .gaiwan .gaiwanLidSteamTea {
     position: absolute;
@@ -245,13 +162,58 @@ body {
     border-radius: 50%;
 }
 
+.moveLid {
+    animation-name: animateLid;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    bottom: 40%;
+    left: 40%;
+}
+@keyframes animateLid{
+    50%{
+    transform: translateY(50px); /*50px*/
+}
+}
+
+
+/* ###Gaiwan (B.1.1) lid knob  */
+
+.container_gaiwan .lidknob {
+    position: absolute;
+    top: -80px;
+    right: 65px;
+    transform: translateX(-40%) rotate(10deg);
+    width: 35px;
+    height: 25px;
+    background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+    border-radius: 41%;
+    box-shadow: 0 -35px -35px rgba(0, 0, 0, 0.2);
+}
+
+.container_gaiwan .lidknob::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 0.5px;
+    bottom: 3px;
+    left: 2.5px;
+    transform: skewY(0.5deg);
+    border-radius: 41%;
+    background: linear-gradient(to right, #f9f9f9, #d9d0d0);
+}
+
+/* ###Gaiwan (B.1.2) lid   */
+
+
+
 .container_gaiwan .lid {
     position: absolute;
-    top: -85px;
-    left: 50%;
+    top: -65px;
+    right: -40px;
     transform: translateX(-50%) rotate(10deg);
-    width: 300px;
-    height: 80px;
+    width: 140px;
+    height: 45px;
     background: linear-gradient(to right, #f9f9f9, #d9d0d0);
     border-radius: 50%;
     box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
@@ -260,10 +222,10 @@ body {
 .container_gaiwan .lid::before {
     content: '';
     position: absolute;
-    top: 14px;
-    right: 6px;
-    bottom: 6px;
-    left: 12px;
+    top: 7px;
+    right: 3px;
+    bottom: 3px;
+    left: 6px;
     transform: skewY(0.5deg);
     border-radius: 50%;
     background: linear-gradient(to left, #f9f9f9, #d9d0d0);
@@ -272,16 +234,16 @@ body {
 .container_gaiwan .lid::after {
     content: '';
     position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: 30px;
-    left: 30px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
     background: linear-gradient(to left, #f9f9f9, #d9d0d0);
     border-radius: 100%;
 }
 
 
-/* ##Gaiwan (C.2) steam from gaiwan */
+/* ##Gaiwan (B.2) steam from gaiwan */
 
 .container_gaiwan .gaiwan .gaiwanLidSteamTea .steam {
     position: relative;
@@ -302,7 +264,7 @@ body {
     animation: animateSteam 5s linear infinite;
     opacity: 0;
     filter: blur(8px);
-    animation-delay: calc(var(--i) * -0.5s);
+    animation-delay: calc(var(--x) * -0.5s);
 }
 
 /* .container_gaiwan .gaiwan .gaiwanLid .gaiwanTeaStream .steam span {
@@ -329,8 +291,8 @@ body {
 }
 
 
+/* ##Gaiwan (B.3) tea liquid inside gaiwan */
 
-/* ##Gaiwan (C.3) tea liquid inside gaiwan */
 .container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanopening {
     position: absolute;
     top: 5px;
@@ -352,77 +314,173 @@ body {
     background: linear-gradient(rgb(228, 239, 129), #8dae54);
     border-radius: 50%;
 }
+/* ##Gaiwan (C) pattern gaiwan tea cup  */
+
+.gaiwanPattern {
+    position: relative;
+    top: 130px;
+    right: 170px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    transform: skew(10deg, -8deg);
+}
+
+.patternMoon {
+  height: 30px; 
+  width: 30px; 
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--color10);
+  top: -70px; 
+  right: -200px; 
+} 
+
+.patternStar {
+  height: 15px; 
+  width: 15px; 
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--color10);
+  top: -10px; 
+  right: -80px; 
+} 
+
+.cloud1 {
+  background-color: var(--color11);
+  height: 10px; 
+  width: 70px;
+  border-radius: 10px; 
+  position: relative;
+  top: 25px; 
+  left: 25px; 
+}
+
+.cloud2 {
+  background-color: var(--color11);
+  height: 10px; 
+  width: 60px; 
+  border-radius: 6.5px; 
+  position: relative;
+  top: 30px; 
+  left: 10px; 
+}
+ 
+.cloud3 {
+  background-color: rgba(204, 102, 0,0.3);
+  height: 15px;
+  width: 60px;
+  border-radius: 11px;
+  position: relative;
+  top: -10px;
+  left: 20px;
+}
+
+.cloud4 {
+  background-color: rgba(204, 102, 0,0.3);
+  height: 15px; 
+  width: 40px; 
+  border-radius: 7.5px; 
+  position: relative;
+  top: 5px; 
+  left: 60px; 
+}
+
+
+.cloud5 {
+  background-color: rgba(255,255,255,0.4);
+  height: 12px;
+  width: 30px;
+  border-radius: 7.5px;
+  position: relative;
+  top: -30px;
+  left: 40px;
+}
 
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container2" id="container2"> 
-              <a class="navbar-brand js-scroll-trigger" href="#page-top">Travel Califonia</a>
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              Menu <i class="fas fa-hamburger"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto" id="navbarul">
-                  <li class="nav-item" id="navbarli">
-                    <a class="nav-link js-scroll-trigger" href="#download">DOWNLOAD</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#features">FEATURES</a>
-                  </li>
-                  <li class="nav-item js-scroll-trigger">
-                    <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-       
-
-    <div class="container_gaiwan">
-        <div class="saucer">
-        </div>
-        <!-- <div class="gaiwanPattern">
-            <div class="patternMoon">
-                <div class="r1"></div>
-                <div class="r2"></div>
-                <div class="r3"></div>
-                <div class="r4"></div>
-                <div class="r5"></div>
-                <div class="r6"></div>
-                <div class="r7"></div>
-                <div class="r8"></div>
-                <div class="shad"></div>
-            </div>
-        </div> -->
-        <div class="gaiwan">
-            <div class="gaiwanLidSteamTea">
-                <div class="moveLid">
-                    <div class="lidknob">
-                    </div>               
-                    <div class="lid">
-                    </div>
-                </div>
-                <div class="gaiwanTeaStream">
-                    <div class="steam">
-                        <span style="--i:1;"></span>
-                        <span style="--i:3;"></span>
-                        <span style="--i:16;"></span>
-                        <span style="--i:5;"></span>
-                        <span style="--i:20;"></span>
-                    </div>
-                </div>
-                <div class="gaiwanopening">
-                    <div class="tea">
-                    </div>
-                </div>
-            </div>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container2" id="container2"> 
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Travel Califonia</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fas fa-hamburger"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto" id="navbarul">
+          <li class="nav-item" id="navbarli">
+            <a class="nav-link js-scroll-trigger" href="#download">DOWNLOAD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">FEATURES</a>
+          </li>
+          <li class="nav-item js-scroll-trigger">
+            <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
     </div>
-
+</nav>
+  <!-- Hero Section -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto"> 
+          <div class="header-content mx-auto"> 
+            <h1 class="mb-5">Download the Travel California app and explore California today!</h1>
+            <a class="btn btn-outline btn-xl js-scroll-trigger" href="#download" role="button">START NOW FOR FREE</a>
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto">
+          <div class="device-container">
+            <div class="container_gaiwan">
+                <div class="saucer">
+                </div>
+        
+                <div class="gaiwan">
+                    <div class="gaiwanPattern">
+                        <div class="patternMoon">
+                            <div class="cloud1"></div>
+                            <div class="cloud2"></div>
+                            <div class="cloud3"></div>
+                            <div class="cloud4"></div>
+                            <div class="cloud5"></div>
+                            <div class="patternStar"></div>
+                        </div>
+                    </div>
+                    <div class="gaiwanLidSteamTea">
+                        <div class="moveLid">
+                            <div class="lidknob">
+                            </div>               
+                            <div class="lid">
+                            </div>
+                        </div>
+                        <div class="gaiwanTeaStream">
+                            <div class="steam">
+                                <span style="--x:1;"></span>
+                                <span style="--x:3;"></span>
+                                <span style="--x:16;"></span>
+                                <span style="--x:5;"></span>
+                                <span style="--x:20;"></span>
+                            </div>
+                        </div>
+                        <div class="gaiwanopening">
+                            <div class="tea">
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
+
+
+
 <!-- <main>
     this is inside main
 </main>
