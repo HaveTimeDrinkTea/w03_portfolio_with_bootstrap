@@ -51,6 +51,8 @@ a {
 
 a:hover, a:focus {
   color: #fcbd20;
+  cursor: grab;
+  text-decoration: none;
 }
 
 hr {
@@ -64,7 +66,27 @@ hr.light {
   border-color: white;
 }
 
-h1,
+.headername h1 {
+  z-index: 999;
+  font-size: 5rem;
+  position: relative;
+  top: 150px;
+  left: 400px;
+  text-align: left;
+  color: var(--color7);
+  text-shadow: 2px 2px var(--color1f);
+}
+
+.headername p {
+  z-index: 999;
+  font-size: 2rem;
+  position: relative;
+  top: 120px;
+  left: 400px;
+  text-align: left;
+  color: var(--color7);
+}
+
 h2,
 h3,
 h4,
