@@ -1,6 +1,9 @@
 <html>
 <head>
     <style>
+  body {
+    background-color:darkgreen;
+  }    
 
 .container_teapot {
     position: relative;
@@ -8,6 +11,7 @@
     max-width: 40vw;
     max-height: 40vh;
 }
+
 .teapot {
   position: relative;
   top: 100px;
@@ -19,119 +23,104 @@
   border-top-left-radius: 50%;
   border-bottom-right-radius: 40%;
   border-bottom-left-radius: 40%;
+  z-index: 2;
 }
 
-.line {
-  position: absolute;
-  top: 86%;
-  left: 0%;
-  width: 200px;
-  height: 10px;
-  background: wheat;
-}
-
-.treflection {
-  position: absolute;
-  top: 3%;
-  left: 37%;
+.lidknobround {
+  position: relative;
+  top: 140px;
+  left: 145px;
   background: wheat;
   width: 50px;
   height: 16px;
   border-radius: 50%;
+  z-index: 4;
 }
 
 .lidknob {
   position: relative;
-  top: -4px;
-  left: 90px;
+  top: 110px;
+  left: 160px;
   width: 20px;
   height: 20px;
   background: black;
   border-radius: 5px;
+  z-index: 5;
 }
 
-.mreflection {
-  position: absolute;
-  top: 19%;
-  left: 30%;
+.potreflection {
+  position: relative;
+  top: 220px; /*19%*/
+  left: 90px;
   border: 10px solid wheat;
 	border-color: transparent transparent transparent white;
-	height: 80px;
-	width: 100px;
-	border-radius: 250px 0 0 260px;
-  transform: rotate(153deg);
+	height: 40px;
+	width: 40px;
+	border-radius: 60px 0 0 60px;
+  transform: rotate(-320deg);
+  z-index: 6;
 }
 
 .handle {
   position: relative;
-  top: -40px;
-  left: 10px;
+  top: -180px;
+  left: 80px;
   width: 150px;
   height: 150px;
   border: 10px solid;
-  border-color: #38200a;
+  border-color: rgb(102, 97, 97);
   border-radius: 35px;
+  z-index: 1;
 }
 
-.hold {
+.handlehold {
   position: relative;
-  top: -220px;
-  left: 60px;
+  top: -360px;
+  left: 130px;
   background: black;
   width: 75px;
   height: 30px;
   border-radius: 10px;
+  z-index: 2;
 }
+
 .spout {
   position: relative;
-  top: -200px;
-  right: -180px;
+  top: -30px;
+  right: -250px;
   background: #38200a;
   height: 70px;
   width: 40px;
   transform: rotate(57deg);
   border-top-left-radius: 40px;
   border-top-right-radius: 10px;
-  /* border-bottom-right-radius: 40%; */
-  /* border-bottom-left-radius: 40%; */
+  z-index: 2;
 }
 
 .spoutopening {
-    position: relative;
-  top: -251px;
-  right: -205px;
+  position: relative;
+  top: -81px;
+  right: -273px;
   transform: rotate(30deg);
   background: wheat;
   width: 30px;
   height: 12px;
   border-radius: 50%;
+  z-index: 3;
 }
 
-/* .inner {
-  position: absolute;
-  top: 12%;
-  right: -11%;
-  background: wheat;
-  width: 15px;
-  height: 55px;
-  transform: rotate(57deg);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-} */
     </style>
 </head>
 <body>
     <div class="container_teapot">
-        <div class="teapot">
-          <div class="handle"></div>
-          <div class="hold"></div>
-          <div class="line"></div>
-          <div class="treflection"></div>
-          <div class="lidknob"></div>
-          <div class="mreflection"></div>
-          <div class="spout"></div>
-          <div class="spoutopening"></div>
-        </div>
+      <div class="potreflection"></div>
+        <div class="lidknobround"></div>
+        <div class="lidknob"></div>
+        <div class="teapot"> </div>
+        <div class="spout"></div>
+        <div class="spoutopening"></div>
+        <div class="handle"></div>
+        <div class="handlehold"></div>
       </div>
 
 </body>
