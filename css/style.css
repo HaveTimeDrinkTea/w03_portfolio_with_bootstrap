@@ -1,14 +1,19 @@
 /* ============================= 
-0. CSS Variables 
+0. CSS Variables  #d8e6e6
 ============================= */
 :root {
-  --bgcolor0: #0047ab;
+  --colorElectricBlue: #0047ab;
+  --colorElectricBlue90: rgb(0, 71, 171, 0.8);
+  --colormustard: #c6ab20;
   --bgcolor:#607d8b;
   --bgcolordark: #313138;
   --bgcolorlight: #edc9c9;
-  --color1a: rgb(216, 95, 38);
-  --color1a1: rgb(216, 95, 38, 0.7);
-  --color1a2: #cd071e;
+  --colorTealLighter: #d8e6e6;
+  --colorTealLight: #99cccc;
+  --colorTealDark: #398098;
+  --colorOrange: rgb(216, 95, 38);
+  --colorOrange70: rgb(216, 95, 38, 0.7);
+  --colorRed: #cd071e;
   --color1b: #e8b97c;
   --color1c: #516e24;
   --color1d: #55a09f;
@@ -17,6 +22,7 @@
   --color1g: #f8faf9;
   --color1: #fcbc3c;
   --color2: #f4f491;
+  --colorGreen: #548434;
   --color3: #548434;
   --color4: #a45c84;
   --color5: #c4be81;
@@ -75,6 +81,7 @@ hr.light {
   text-align: left;
   color: var(--color7);
   text-shadow: 2px 2px var(--color1f);
+
 }
 
 .headername p {
@@ -127,6 +134,7 @@ section h2 {
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
   background-color:#64a19d!important;
+  opacity: 90%;
   transition: all .35s;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
@@ -183,7 +191,7 @@ header.masthead {
   padding-top: 70px; /* 150px */
   padding-bottom: 5px;
   color: var(--fontvintage);
-  background-color: var(--bgcolor);
+  background-color: var(--colormustard);
 }
 
 header.masthead .header-content {
