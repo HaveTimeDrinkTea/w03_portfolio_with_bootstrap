@@ -2,50 +2,48 @@
 0. CSS Variables  #d8e6e6
 ============================= */
 :root {
+  --fontvintage: #e0eae4;
   --colorElectricBlue: #0047ab;
   --colorElectricBlue90: rgb(0, 71, 171, 0.8);
   --colormustard: #c6ab20;
   --colormustard70: rgb(198, 171, 32, 0.7);
-  --colormustardDark: rgb(25, 102, 117);
   --colorWheat: wheat;
   --colorWheat80: rgb(245,222,179, 0.8);
   --colorRed: #cd071e;
   --colorRed70: rgb(205, 7, 30, 0.7);
-  --colorGreen: #548434;
+  --colorGreen: rgb(84, 132, 52, 1);
   --colorGreen70: rgb(84, 132, 52, 0.7);
   --bgcolor:#607d8b;
   --bgcolordark: #313138;
   --bgcolorlight: #edc9c9;
   --colorTealLighter: #d8e6e6;
   --colorTealLight: #99cccc;
-  --colorTealDark: #398098;
+  --colorTealDark: rgb(58, 128, 152, 1);
+  --colormustardDarker: rgb(25, 102, 117);
   --colorOrange: rgb(216, 95, 38);
   --colorOrange70: rgb(216, 95, 38, 0.7);
   --colorBrownLight: #62523a; 
-  --colorBrownDark: #54402c;
+  --colorBrownDark: rgb(84, 64, 44, 1);
   --colorBrownDarker: #432a11;
   --colorYellowLight: #f4f491;
   --colorGreyLight: #b9b6b6;
   --colorGrey: #696969;
+  --colorPurple: #611bbc;
+  --colorPurpleDark: #5318a0;
+  --color1e: #97c9c9;
+  --color1d: #55a09f;
   --color1b: #e8b97c;
   --color1c: #516e24;
-  --color1d: #55a09f;
-  --color1e: #97c9c9;
   --color1g: #f8faf9;
   --color1: #fcbc3c;
   --color2: #f4f491;
-  --colorGreen: #548434;
   --color3: #3560aa;
   --color4: #a45c84;
   --color5: #c4be81;
   --color7: #023F92;
-  --colorPurple: #611bbc;
-  --colorPurpleDark: #5318a0;
   --color9: #26b89d;
   --color10: #ff9933;
   --color11: #ffbf80;
-  --fontvintage: #e0eae4;
-
 }
 
 /* ============================= 
@@ -231,439 +229,139 @@ header.masthead .device-container .screen img {
 }
 
 
-
-
-
-/* 2.3 Gaiwan and animations ============= */
-/* CSS for gaiwan & animations  */
-.container_gaiwan {
-  position: relative;
-  top: 10vh;
-  max-width: 40vw;
-  max-height: 40vh;
-}
-
-/* ##Gaiwan (A) saucer  */
-.container_gaiwan .saucer {
-  position: relative;
-  bottom: -200px;
-  right: -230px;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 75px;
-  background: linear-gradient(to right, #f9f9f9, #e7e7e7);
-  border-radius: 50%;
-  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
-}
-
-.container_gaiwan .saucer::before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  border-radius: 50%;
-  background: linear-gradient(to left, #f9f9f9, #e7e7e7);
-  z-index: 2;
-}
-
-.container_gaiwan .saucer::after {
-  content: '';
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
-  border-radius: 50%;
-  z-index: 2;
-}
-
-/* ##Gaiwan (B) gaiwan with lid and animation  */
-
-
-.container_gaiwan .gaiwan {
-  position: relative;
-  top: 60px;
-  right: -160px;
-  width: 140px;
-  height: 115px;
-  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
-  border-bottom-left-radius: 85%;
-  border-bottom-right-radius: 85%;
-}
-
-/* ##Gaiwan (B.1) lid, lidknob and animation  */
-
-.container_gaiwan .gaiwan .gaiwanLidSteamTea {
-  position: absolute;
-  top: -30px;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
-  border-radius: 50%;
-}
-
-.moveLid {
-  animation-name: animateLid;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  position: relative;
-  bottom: 40%;
-  left: 40%;
-}
-@keyframes animateLid{
-  50%{
-  transform: translateY(50px); /*50px*/
-}
-}
-
-
-/* ###Gaiwan (B.1.1) lid knob  */
-
-.container_gaiwan {
-  top: -200px;
-  z-index: 999;
-}
-
-
-.container_gaiwan .gaiwanlidknob {
-  position: absolute;
-  top: -80px;
-  right: 65px;
-  transform: translateX(-40%) rotate(10deg);
-  width: 35px;
-  height: 25px;
-  background: linear-gradient(to left, #f9f9f9, #e7e7e7);
-  border-radius: 41%;
-  box-shadow: 0 -35px -35px rgba(0, 0, 0, 0.2);
-}
-
-.container_gaiwan .gaiwanlidknob::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  right: 0.5px;
-  bottom: 3px;
-  left: 2.5px;
-  transform: skewY(0.5deg);
-  border-radius: 41%;
-  background: linear-gradient(to right, #f9f9f9, #d9d0d0);
-}
-
-/* ###Gaiwan (B.1.2) lid   */
-
-
-
-.container_gaiwan .lid {
-  position: absolute;
-  top: -65px;
-  right: -40px;
-  transform: translateX(-50%) rotate(10deg);
-  width: 140px;
-  height: 45px;
-  background: linear-gradient(to right, #f9f9f9, #d9d0d0);
-  border-radius: 50%;
-  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
-}
-
-.container_gaiwan .lid::before {
-  content: '';
-  position: absolute;
-  top: 7px;
-  right: 3px;
-  bottom: 3px;
-  left: 6px;
-  transform: skewY(0.5deg);
-  border-radius: 50%;
-  background: linear-gradient(to left, #f9f9f9, #d9d0d0);
-}
-
-.container_gaiwan .lid::after {
-  content: '';
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  background: linear-gradient(to left, #f9f9f9, #d9d0d0);
-  border-radius: 100%;
-}
-
-
-/* ##Gaiwan (B.2) steam from gaiwan */
-
-.container_gaiwan .gaiwan .gaiwanLidSteamTea .steam {
-  position: relative;
-  display: flex;
-  z-index: 1;
-  padding: 0 20px;
-}
-
-.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanTeaStream .steam span {
-  position: relative;
-  bottom: 50px;
-  display: block;
-  margin: 0 2px 50px;
-  min-width: 8px;
-  height: 120px;
-  background: #fff;
-  border-radius: 50%;
-  animation: animateSteam 5s linear infinite;
-  opacity: 0;
-  filter: blur(8px);
-  animation-delay: calc(var(--x) * -0.5s);
-}
-
-/* .container_gaiwan .gaiwan .gaiwanLid .gaiwanTeaStream .steam span {
-  display: none;
-} */
-
-@keyframes animateSteam {
-  0% {
-      transform: translateY(0) scaleX(1);
-      opacity: 0;
-  }
-  15% {
-      opacity: 1;
-  }
-  50% {
-      transform: translateY(-150px) scaleX(5);
-  }
-  95% {
-      opacity: 0;
-  }
-  100% {
-      transform: translateY(-300px) scaleX(10);
-  }
-}
-
-
-/* ##Gaiwan (B.3) tea liquid inside gaiwan */
-
-.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanopening {
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  width: calc(100% - 20px);
-  height: 50px;
-  background: linear-gradient(to left, #f9f9f9, #d9d9d9);
-  border-radius: 50%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.container_gaiwan .gaiwan .gaiwanLidSteamTea .gaiwanopening .tea {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgb(228, 239, 129), #8dae54);
-  border-radius: 50%;
-}
-/* ##Gaiwan (C) pattern gaiwan tea cup  */
-
-.gaiwanPattern {
-  position: relative;
-  top: 130px;
-  right: 170px;
-  width: 50px;
-  height: 50px;
-  z-index: 10;
-  transform: skew(10deg, -8deg);
-}
-
-.patternMoon {
-height: 30px; 
-width: 30px; 
-border-radius: 50%;
-position: relative;
-background-color: var(--color10);
-top: -70px; 
-right: -200px; 
-} 
-
-.patternStar {
-height: 15px; 
-width: 15px; 
-border-radius: 50%;
-position: relative;
-background-color: var(--color10);
-top: -10px; 
-right: -80px; 
-} 
-
-.cloud1 {
-background-color: var(--color11);
-height: 10px; 
-width: 70px;
-border-radius: 10px; 
-position: relative;
-top: 25px; 
-left: 25px; 
-}
-
-.cloud2 {
-background-color: var(--color11);
-height: 10px; 
-width: 60px; 
-border-radius: 6.5px; 
-position: relative;
-top: 30px; 
-left: 10px; 
-}
-
-.cloud3 {
-background-color: rgba(204, 102, 0,0.3);
-height: 15px;
-width: 60px;
-border-radius: 11px;
-position: relative;
-top: -10px;
-left: 20px;
-}
-
-.cloud4 {
-background-color: rgba(204, 102, 0,0.3);
-height: 15px; 
-width: 40px; 
-border-radius: 7.5px; 
-position: relative;
-top: 5px; 
-left: 60px; 
-}
-
-
-.cloud5 {
-background-color: rgba(255,255,255,0.4);
-height: 12px;
-width: 30px;
-border-radius: 7.5px;
-position: relative;
-top: -30px;
-left: 40px;
-}
-
-
-/* 2.4 tea pot ============= */
-
-
-.container_teapot {
-  position: relative;
-  top: 10vh;
-  max-width: 40vw;
-  max-height: 40vh;
-}
-
-.teapotbrown {
-position: relative;
-bottom: -50px;
-left: 70px;
-width: 200px;
-height: 150px;
-background-color: #38200a;
-border-top-right-radius: 50%;
-border-top-left-radius: 50%;
-border-bottom-right-radius: 40%;
-border-bottom-left-radius: 40%;
-z-index: 2;
-}
-
-.lidknobround {
-position: relative;
-bottom: -90px;
-left: 145px;
-background: wheat;
-width: 50px;
-height: 16px;
-border-radius: 50%;
-z-index: 4;
-}
-
-.lidknob {
-position: relative;
-bottom: -60px;
-left: 160px;
-width: 20px;
-height: 20px;
-background: black;
-border-radius: 5px;
-z-index: 5;
-}
-
-.potreflection {
-position: relative;
-bottom: -150px; /*19%*/
-left: 90px;
-border: 10px solid wheat;
-border-color: transparent transparent transparent white;
-height: 40px;
-width: 40px;
-border-radius: 60px 0 0 60px;
-transform: rotate(-320deg);
-z-index: 6;
-}
-
-.handle {
-position: relative;
-bottom: 250px;
-left: 95px;
-width: 150px;
-height: 150px;
-border: 10px solid;
-border-color: rgb(102, 97, 97);
-border-radius: 35px;
-z-index: 1;
-}
-
-.handlehold {
-position: relative;
-bottom: 410px;
-left: 130px;
-background: black;
-width: 75px;
-height: 30px;
-border-radius: 10px;
-z-index: 2;
-}
-
-.spout {
-position: relative;
-bottom: 80px;
-right: -250px;
-background: #38200a;
-height: 70px;
-width: 40px;
-transform: rotate(57deg);
-border-top-left-radius: 40px;
-border-top-right-radius: 10px;
-z-index: 2;
-}
-
-.spoutopening {
-position: relative;
-bottom: 131px;
-right: -273px;
-transform: rotate(30deg);
-background: wheat;
-width: 30px;
-height: 12px;
-border-radius: 50%;
-z-index: 3;
-}
-
-
+/* 2.3 container for about me, portfolio and contact sections */
 /* 2.4 Hero header ============= */
 
-section.aboutMe {
+section {
   position: relative;
-  width: 100%;
-  padding-top: 70px; /* 150px */
-  padding-bottom: 5px;
+  width: 100%; 
   color: var(--fontvintage);
-  background-color: var(--colormustard);
-  background: linear-gradient(to bottom,  rgb(216, 95, 38, 1) 0%,  rgb(216, 95, 38) 75%, rgb(216, 95, 38) 100%);
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
+
+/* Section ABOUT ME  */
+section.aboutMe {
+  padding-top: 70px;
+  padding-bottom: 5px;
+  background-color: var(--colormustard); /* LAST section colour */
+  background: linear-gradient(
+    to bottom,  
+    var(--colorOrange) 0%,      /* This section colour */
+    var(--colorOrange) 75%,     /* This section colour */
+    var(--colorBrownDark) 100%  /* NEXT section colour */
+    );
+}
+
+section.aboutMeFadeOut {
+  padding-bottom: 20px;
+  margin: 0;
+  border: 0;
+  background-color:  var(--colorBrownDark); /* NEXT section colour */
+  background: linear-gradient(
+    to bottom,  
+    var(--colorBrownDark) 0%,   /* NEXT section colour */
+    var(--colorBrownDark) 75%,  /* NEXT section colour */
+    var(--colorBrownDark) 100%  /* NEXT section colour */
+    );
+}
+
+
+/* Section PORTFOLIO  */
+
+section.myPortfolio {
+  background-color: var(--colorOrange); /* LAST section colour */
+  background: linear-gradient(
+    to bottom, 
+    var(--colorBrownDark) 0%,     /* This section colour */
+    var(--colorBrownDark) 50%,    /* This section colour */
+    var(--colorGreen) 100% /* NEXT section colour */
+  );
+}
+
+section.myPortfolioFadeOut {
+  padding-bottom: 20px;
+  margin: 0;
+  border: 0;
+  background-color:  var(--colorGreen); /* NEXT section colour */
+  background: linear-gradient(
+    to bottom,  
+    var(--colorGreen)  0%,    /* NEXT section colour */
+    var(--colorGreen) 75%,   /* NEXT section colour */
+    var(--colorGreen) 100%   /* NEXT section colour */
+    );
+}
+
+/* Section CONTACT ME  */
+
+section.contactMe {
+  background-color: var(--colorBrownDark); /* LAST section colour */
+  background: linear-gradient(
+    to bottom, 
+    var(--colorTealDark) 0%,  /* This section colour */
+    var(--colorTealDark) 50%, /* This section colour */
+    var(--colorGreen) 100%   /* NEXT section colour */
+  );
+}
+
+section.contactMeFadeOut {
+  padding-bottom: 20px;
+  margin: 0;
+  border: 0;
+  background-color:  var(--colorGreen); /* NEXT section colour */
+  background: linear-gradient(
+    to bottom,  
+    var(--colorGreen) 0%,    /* NEXT section colour */
+    var(--colorGreen) 75%,   /* NEXT section colour */
+    var(--colorGreen) 100%   /* NEXT section colour */
+    );
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 4rem;
+}
+
+
+.flex_item_left {
+  display: flex;
+  width: 20vw; 
+  position: relative;
+  justify-content: flex-end;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  border-right: solid  0.5rem var(--fontvintage);
+  /* box-shadow: 5px 0 20px var(--bgcolordark); */
+}
+
+.flex_item_right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  justify-content: left; 
+  padding-left: 2rem;
+  padding-right: 5rem;
+}
+
+.flex_item_right_contact {
+  width: 80vw;
+  justify-content: left; 
+  padding-left: 2rem;
+  padding-right: 5rem;
+}
+
