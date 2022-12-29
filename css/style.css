@@ -1,5 +1,5 @@
 /* ============================= 
-0. CSS Variables  #d8e6e6
+0. CSS Variables  
 ============================= */
 :root {
   --fontvintage: #e0eae4;
@@ -7,7 +7,7 @@
   --colorElectricBlue90: rgba(0, 71, 171, 0.9);
   --colormustard: #c6ab20;
   --colormustard70: rgba(198, 171, 32, 0.7);
-  --colorWheat: wheat;
+  --colorWheat: rgba(245, 222, 179, 1);
   --colorWheat50: rgba(245,222,179, 0.5);
   --colorWheat80: rgba(245,222,179, 0.8);
   --colorRed: #cd071e;
@@ -27,7 +27,6 @@
   --colorBrownLight: #62523a;
   --colorBrownDark: rgba(84, 64, 44, 1);
   --colorBrownDark50: rgba(84, 64, 44, 0.5);
-  --colorBrown1: #be7e4a;
   --colorBrownMonkey1: rgba(151, 132, 108, 1);  
   --colorBrownMonkey50a: rgba(151, 132, 108, 0.5);  
   --colorBrownMonkey: rgba(129, 95, 37, 1);  
@@ -45,6 +44,8 @@
   --colorYellowLight: #f4f491;
   --colorGreyLight: #b9b6b6;
   --colorGrey: #696969;
+  --colorPink: #a45c84;
+  --colorBrown1: #be7e4a;
   --color1e: #97c9c9;
   --color1d: #55a09f;
   --color1b: #e8b97c;
@@ -53,7 +54,6 @@
   --color1: #fcbc3c;
   --color2: #f4f491;
   --color3: #3560aa;
-  --color4: #a45c84;
   --color5: #c4be81;
   --color7: #023F92;
   --color9: #26b89d;
@@ -81,7 +81,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #fcbd20;
+  color: var(--colorRed); /*#fcbd20*/
   cursor: grab;
   text-decoration: none;
 }
@@ -110,10 +110,10 @@ hr.light {
 
 .headername p {
   z-index: 999;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: relative;
   top: 120px;
-  left: 220px;
+  left: 150px;
   margin-top: 20px;
   text-align: right;
   color: var(--colorPurple);
@@ -146,11 +146,6 @@ section h2 {
 
 
 
-
-
-
-
-
 /* ============================= 
 2. Hero Header and Nav 
 ============================= */
@@ -160,7 +155,6 @@ section h2 {
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
   background-color:#64a19d!important;
-  opacity: 90%;
   transition: all .35s;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
@@ -183,18 +177,23 @@ section h2 {
   padding: 8px 10px;
   color: var(--colormustard); /*#222222;*/
   font-weight: 500;
+  background-color: var(--colorTealLighter);
+  border: 0;
 }
 
 #mainNav .navbar-nav > li > a {
-  font-size: 11px;
+  font-size: 12px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: right;
+  padding-right: 2px;
+  border: 0;
+  background-color: var(--colorTealLighter);
 }
 
 #mainNav .navbar-nav > li > a.active {
-  color: #fdcc52 !important;
+  color: var(--colorRed) !important; /*#fdcc52 */
   background-color: transparent;
 }
 
@@ -209,7 +208,7 @@ section h2 {
 
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
-  color: #fdcc52;
+  color: var(--colorRed); /* #fdcc52;*/
 }
 
 /* 2.2 Hero header ============= */
@@ -368,7 +367,23 @@ section.mySkillsFadeOut {
 
 
 
-.container {
+/* Footer section */
+
+section.footerNav {
+  background-color: var(--colorTealDark50);  /* LAST section colour */
+  padding: 40px;
+  width: 100vw;
+  background: linear-gradient(
+    to bottom, 
+    var(--colorCyanDark) 0%,  /* This section colour */
+    var(--colorCyanDark) 80%, /* This section colour */
+    var(--colorCyanDark) 100%   /* NEXT section colour */
+  );
+}
+
+
+/* container */
+/* .container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -376,7 +391,7 @@ section.mySkillsFadeOut {
   width: 100vw;
   margin: 0;
   padding: 0;
-}
+} */
 
 .flex {
   display: flex;
@@ -418,6 +433,26 @@ section.mySkillsFadeOut {
 
 /* Footer section */
 
-footer {
-  background-color: var(--colorCyanDark);  
+section.footerNav {
+  background-color: var(--colorTealDark50);  /* LAST section colour */
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background: linear-gradient(
+    to bottom, 
+    var(--colorCyanDark) 0%,  /* This section colour */
+    var(--colorCyanDark) 80%, /* This section colour */
+    var(--colorCyanDark) 100%   /* NEXT section colour */
+  );
+}
+
+.footerP {
+  color: var(--colorWheat);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.footerTags {
+  color: var(--colorPink);
+  font-size: 1rem;
+  font-weight: bold;
 }
