@@ -591,7 +591,18 @@
     }
 }
 
+.dropletSection{
+    top: 0px;
+    left: 0px;
+    animation: anime_dropletSection 3s linear infinite;
+}
 
+
+@keyframes anime_dropletSection {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(40px, 0)}
+    100% {transform: translate(0, 0)}
+}
 
 
 /* tea cup and sake cup */

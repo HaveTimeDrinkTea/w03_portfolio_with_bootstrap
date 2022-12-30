@@ -154,6 +154,7 @@ section h2 {
 
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
+  width: 100vw;
   background-color:#64a19d!important;
   transition: all .35s;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
@@ -177,7 +178,7 @@ section h2 {
   padding: 8px 10px;
   color: var(--colormustard); /*#222222;*/
   font-weight: 500;
-  background-color: var(--colorTealLighter);
+  /* background-color: var(--colorTealLighter); */
   border: 0;
 }
 
@@ -189,7 +190,8 @@ section h2 {
   text-align: right;
   padding-right: 2px;
   border: 0;
-  background-color: var(--colorTealLighter);
+  /* background-color: var(--colorTealLighter); */
+  opacity: 70%; 
 }
 
 #mainNav .navbar-nav > li > a.active {
@@ -224,7 +226,7 @@ header.masthead {
     var(--colormustard) 0%, 
     var(--colormustard) 75%,
     var(--colorOrange) 100%
-     );
+    );
 }
 
 header.masthead .header-content {
@@ -249,6 +251,11 @@ header.masthead .device-container .screen img {
 
 
 /* 2.3 container for about me, portfolio and contact sections */
+
+/* main {
+  width: 100%;
+} */
+
 /* 2.4 Hero header ============= */
 
 section {
@@ -260,8 +267,40 @@ section {
   border: 0;
 }
 
-/* Section ABOUT ME  */
-section.aboutMe {
+
+.container_section_top {
+  padding-top: 0;
+}
+
+.container_section {
+  padding-top: 5rem;
+}
+
+
+
+.flex_item_left {
+  display: flex;
+  /* width: 20vw;  */
+  position: relative;
+  justify-content: flex-end;
+  /* padding-top: 3rem; */
+  padding-right: 2rem;
+  border-right: solid  0.5rem var(--fontvintage);
+}
+
+.flex_item_right {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 80vw; */
+  justify-content: left; 
+  /* padding-top: 3rem; */
+  padding-left: 2rem;
+  padding-right: 5rem;
+}
+
+
+/* Section ONE Top  */
+section.firstSection {
   padding-top: 70px;
   padding-bottom: 5px;
   background-color: var(--colormustard); /* LAST section colour */
@@ -273,7 +312,7 @@ section.aboutMe {
     );
 }
 
-section.aboutMeFadeOut {
+section.firstSectionFadeOut {
   padding-bottom: 20px;
   margin: 0;
   border: 0;
@@ -287,9 +326,9 @@ section.aboutMeFadeOut {
 }
 
 
-/* Section PORTFOLIO  */
+/* Section TWO  */
 
-section.myPortfolio {
+section.secondSection {
   padding-bottom: 5px;
   background-color: var(--colorOrange); /* LAST section colour */
   background: linear-gradient(
@@ -300,7 +339,7 @@ section.myPortfolio {
   );
 }
 
-section.myPortfolioFadeOut {
+section.secondSectionFadeOut {
   padding-bottom: 20px;
   margin: 0;
   border: 0;
@@ -313,9 +352,9 @@ section.myPortfolioFadeOut {
     );
 }
 
-/* Section CONTACT ME  */
+/* Section THREE  */
 
-section.contactMe {
+section.thirdSection {
   padding-bottom: 5px;
   background-color: var(--colorBrownDark); /* LAST section colour */
   background: linear-gradient(
@@ -326,7 +365,7 @@ section.contactMe {
   );
 }
 
-section.contactMeFadeOut {
+section.thirdSectionFadeOut {
   padding-bottom: 20px;
   margin: 0;
   border: 0;
@@ -339,9 +378,9 @@ section.contactMeFadeOut {
     );
 }
 
-/* Section My SKILLS  */
+/* Section FOUR  */
 
-section.mySkills {
+section.fourthSection {
   padding-bottom: 5px;
   background-color: var(--colorGreen); /* LAST section colour */
   background: linear-gradient(
@@ -352,7 +391,7 @@ section.mySkills {
   );
 }
 
-section.mySkillsFadeOut {
+section.fourthSectionFadeOut {
   padding-bottom: 20px;
   margin: 0;
   border: 0;
@@ -364,6 +403,53 @@ section.mySkillsFadeOut {
     var(--colorCyanDark) 100%   /* NEXT section colour */
     );
 }
+
+
+/* CONTACT ME Section */
+
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  float: left; 
+  padding: 0px 0px 0px 0px;
+  margin: 2px;
+  background-color: var(--colorTealDark);
+  border-radius: 60%;
+  border: solid  0.5rem var(--fontvintage);
+}
+
+.avatar_image {
+  opacity: 1;
+  display: block;
+  width: 150px;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.avatar_container {
+  position: relative;
+  width: 50%;
+  cursor: grab;
+}
+
+.avatar_middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+}
+
+.avatar_container:hover .avatar_image {
+  opacity: 1;
+}
+
+.avatar_container:hover .avatar_middle {
+  opacity: 1;
+}
+
+
 
 
 
@@ -382,67 +468,32 @@ section.footerNav {
 }
 
 
-/* container */
-/* .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-} */
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin-bottom: 4rem;
-}
-
-
-.flex_item_left {
-  display: flex;
-  width: 20vw; 
-  position: relative;
-  justify-content: flex-end;
-  padding-top: 2rem;
-  padding-right: 2rem;
-  border-right: solid  0.5rem var(--fontvintage);
-  /* box-shadow: 5px 0 20px var(--bgcolordark); */
-}
-
-.flex_item_right {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80vw;
-  justify-content: left; 
-  padding-left: 2rem;
-  padding-right: 5rem;
-}
-
-.flex_item_right_contact {
-  width: 80vw;
-  justify-content: left; 
-  padding-left: 2rem;
-  padding-right: 5rem;
-}
-
-
 /* Footer section */
+
+footer {
+  max-width: 100%;
+}
 
 section.footerNav {
   background-color: var(--colorTealDark50);  /* LAST section colour */
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
   background: linear-gradient(
     to bottom, 
     var(--colorCyanDark) 0%,  /* This section colour */
     var(--colorCyanDark) 80%, /* This section colour */
     var(--colorCyanDark) 100%   /* NEXT section colour */
   );
+}
+
+
+.footmsg {
+  font-size: 1.5rem;
+  top: 2rem;
+  bottom: 2rem;
+  text-align: center;
+  display: inline;
+  color: var(--color5);
 }
 
 .footerP {
@@ -456,3 +507,4 @@ section.footerNav {
   font-size: 1rem;
   font-weight: bold;
 }
+
