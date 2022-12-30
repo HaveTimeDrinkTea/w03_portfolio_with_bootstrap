@@ -20,7 +20,8 @@
   --colorGreen70: rgba(84, 132, 52, 0.7);
   --colorTealDark: rgba(58, 128, 152, 1);
   --colorTealDark50: rgba(58, 128, 152, 0.5);
-  --colorTealDarker: rgba(25, 102, 117, 1);
+  --colorTealDarker: rgb(11, 70, 82);
+  --colorTealDarker2: rgb(3, 52, 62);
   --colorOrange: rgba(216, 95, 38, 1);
   --colorOrange50: rgba(216, 95, 38, 0.5);
   --colorOrange70: rgba(216, 95, 38, 0.7);
@@ -409,11 +410,11 @@ section.fourthSectionFadeOut {
 
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   float: left; 
   padding: 0px 0px 0px 0px;
-  margin: 2px;
+  margin: 20px;
   background-color: var(--colorTealDark);
   border-radius: 60%;
   border: solid  0.5rem var(--fontvintage);
@@ -422,7 +423,7 @@ section.fourthSectionFadeOut {
 .avatar_image {
   opacity: 1;
   display: block;
-  width: 150px;
+  width: 170px;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -430,8 +431,9 @@ section.fourthSectionFadeOut {
 
 .avatar_container {
   position: relative;
-  width: 50%;
+  width: 100%;
   cursor: grab;
+  float: left;
 }
 
 .avatar_middle {
@@ -449,6 +451,52 @@ section.fourthSectionFadeOut {
   opacity: 1;
 }
 
+.contact_content {
+  padding-left: 50px;
+  margin-left: 50px;
+}
+
+.opener {
+  font-weight: bolder;
+  font-size: larger;
+  color: var(--color1);
+}
+
+.disclaimer {
+  font-size: 0.7em;
+  margin: 0;
+  padding: 0;
+}
+
+
+form {
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: auto;
+  color: var(--fontvintage);
+  background-color: var(--colorOrange);
+  border: solid 1px var(--fontvintage);
+  border-radius: 8px;
+  box-shadow: 2px 4px var(--colorTealDarker);
+}
+
+.button:hover {background-color: var(--colorElectricBlue)}
+
+.button:active {
+  background-color: var(--colorGreen);
+  box-shadow: 0 5px var(--colorTealDarker2);
+  transform: translateY(4px);
+}
 
 
 
@@ -507,4 +555,5 @@ section.footerNav {
   font-size: 1rem;
   font-weight: bold;
 }
+
 
