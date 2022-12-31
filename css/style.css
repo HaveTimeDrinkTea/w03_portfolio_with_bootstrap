@@ -7,6 +7,7 @@
   --colorElectricBlue90: rgba(0, 71, 171, 0.9);
   --colormustard: #c6ab20;
   --colormustard70: rgba(198, 171, 32, 0.7);
+  --colorLemon: #fdcc52;
   --colorWheat: rgba(245, 222, 179, 1);
   --colorWheat50: rgba(245,222,179, 0.5);
   --colorWheat80: rgba(245,222,179, 0.8);
@@ -47,6 +48,8 @@
   --colorGrey: #696969;
   --colorPink: #a45c84;
   --colorBrown1: #be7e4a;
+  --colorCharcoalDark: #222222;
+  --colorCharcoal: rgb(69, 69, 69);
   --color1e: #97c9c9;
   --color1d: #55a09f;
   --color1b: #e8b97c;
@@ -77,12 +80,12 @@ body {
 } */
 
 a {
-  color: #fdcc52;
+  color:var(--colorLemon);
   transition: all .35s;
 }
 
 a:hover, a:focus {
-  color: var(--colorRed); /*#fcbd20*/
+  color: var(--colorLemon);
   cursor: grab;
   text-decoration: none;
 }
@@ -164,20 +167,22 @@ section h2 {
 } 
 
 #mainNav .navbar-brand {
-  color: #fdcc52;
+  color: var(--colorCharcoal);
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 2rem;
   font-weight: 200;
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-  color: #fcbd20;
+  color: var(--colorCharcoal);
 }
 
 #mainNav .navbar-toggler {
   font-size: 30px;
   padding: 8px 10px;
-  color: var(--colormustard); /*#222222;*/
+  color:var(--colorLemon);; 
   font-weight: 500;
   /* background-color: var(--colorTealLighter); */
   border: 0;
@@ -197,6 +202,7 @@ section h2 {
 
 #mainNav .navbar-nav > li > a.active {
   color: var(--colorRed) !important; /*#fdcc52 */
+  border: 0;
   background-color: transparent;
 }
 
@@ -211,7 +217,7 @@ section h2 {
 
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
-  color: var(--colorRed); /* #fdcc52;*/
+  color: #fdcc52; /* ;*/
 }
 
 /* 2.2 Hero header ============= */
@@ -240,15 +246,15 @@ header.masthead .header-content h1 {
   font-size: 30px;
 }
 
-header.masthead .device-container {
+/* header.masthead .device-container {
   max-width: 325px;
   margin-right: auto;
   margin-left: auto;
-}
+} */
 
-header.masthead .device-container .screen img {
+/* header.masthead .device-container .screen img {
   border-radius: 3px;
-}
+} */
 
 
 /* 2.3 container for about me, portfolio and contact sections */
