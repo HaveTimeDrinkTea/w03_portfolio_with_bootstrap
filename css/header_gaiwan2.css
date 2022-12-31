@@ -3,10 +3,13 @@
 /* CSS for gaiwan & animations  */
 .container_gaiwan {
     position: relative;
-    top: 0vh;
+    top: -200px;
     max-width: 40vw;
     max-height: 40vh;
+    z-index: 999;
   }
+
+  
 
 .container_gaiwan p {
   font-size: 2rem;
@@ -18,7 +21,7 @@
   /* ##Gaiwan (A) saucer  */
   .container_gaiwan .saucer {
     position: relative;
-    bottom: -200px;
+    top: 400px;
     right: -230px;
     transform: translateX(-50%);
     width: 200px;
@@ -37,7 +40,6 @@
     left: 5px;
     border-radius: 50%;
     background: linear-gradient(to left, #f9f9f9, #e7e7e7);
-    z-index: 2;
   }
   
   .container_gaiwan .saucer::after {
@@ -49,7 +51,6 @@
     left: 15px;
     background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
     border-radius: 50%;
-    z-index: 2;
   }
   
   /* ##Gaiwan (B) gaiwan with lid and animation  */
@@ -57,7 +58,7 @@
   
   .container_gaiwan .gaiwan {
     position: relative;
-    top: 60px;
+    top: 260px;
     right: -160px;
     width: 140px;
     height: 115px;
@@ -95,11 +96,7 @@
   
   /* ###Gaiwan (B.1.1) lid knob  */
   
-  .container_gaiwan {
-    top: -200px;
-    z-index: 999;
-  }
-  
+
   
   .container_gaiwan .gaiwanlidknob {
     position: absolute;

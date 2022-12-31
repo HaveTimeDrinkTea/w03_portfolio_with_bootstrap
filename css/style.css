@@ -209,7 +209,8 @@ color: var(--colorLemon);
 /* 2.2 Hero header ============= */
 header.masthead {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  height: 100%; /* added after index2*/
   padding-top: 70px; /* 150px */
   padding-bottom: 5px;
   color: var(--fontvintage);
@@ -276,15 +277,16 @@ header.masthead .header-content h1 {
 }
 
 
-/* main {
-  width: 100%;
-} */
+
 
 
 /* ============================= 
 3 Main Body Sections  
 ============================= */
 
+main {
+  width: 100vw;
+}
 
 /* 3.0 Sectioms structures ============= */
 
@@ -524,7 +526,57 @@ text-decoration: none;
 }
 
 
-/* 3.6 Contact me  ============= */
+/* 3.6 Skills Section  ============= */
+
+.awesomeFontIcon {
+  font-size: 3rem;
+}
+
+.bgHTML5 {
+  background-color: #e34c26;
+}
+
+.bgCSS3 {
+  background-color: #264de4;
+}
+
+.bgWordpress {
+  background-color: rgb(0, 116, 156);
+}
+
+.bgJScript {
+  background-color: #f0db4f;
+}
+
+.bgWoo {
+  background-color: #3C2861;
+}
+
+.bgMySQL {
+  background-color: #f29111;
+}
+
+.bgReact {
+  background-color: #61DBFB;
+}
+
+.bgSwift {
+  background-color: var(--colorOrange);
+}
+
+.bgGitHub {
+  background-color: var(--colorPurple);
+}
+
+.bgGit {
+  background-color: #3E2C00;
+}
+
+.bgAffinity {
+  background-color:  #fc9cb4;
+}
+
+/* 3.7 Contact me Section ============= */
 
 .avatar {
   width: 170px;
@@ -615,7 +667,7 @@ form {
   transform: translateY(4px);
 }
 
-/* 3.7 About Me ============= */
+/* 3.8 About Me ============= */
 .opener {
   font-weight: bolder;
   font-size: larger;
