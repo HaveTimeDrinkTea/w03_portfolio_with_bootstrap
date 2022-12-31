@@ -75,9 +75,9 @@ body {
   height: 100%;
 }
 
-/* body {
+body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
-} */
+}
 
 a {
   color:var(--colorLemon);
@@ -101,29 +101,8 @@ hr.light {
   border-color: white;
 }
 
-.headername h1 {
-  z-index: 999;
-  font-size: 5rem;
-  position: relative;
-  top: 150px;
-  left: 400px;
-  text-align: left;
-  color: var(--colorPurple);
-  text-shadow: 3px 3px var(--fontvintage);
-}
 
-.headername p {
-  z-index: 999;
-  font-size: 1.5rem;
-  position: relative;
-  top: 120px;
-  left: 150px;
-  margin-top: 20px;
-  text-align: right;
-  color: var(--colorPurple);
-  text-shadow: 2px 2px var(--colorGreyLight);
-}
-
+h1,
 h2,
 h3,
 h4,
@@ -154,7 +133,7 @@ section h2 {
 2. Hero Header and Nav 
 ============================= */
 
-/* 1.2 Navigation ============= */
+/* 2.2 Navigation ============= */
 
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
@@ -173,6 +152,13 @@ section h2 {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+#mainNav .navbar-brand .namePronoun {
+font-size: 0.5rem;
+font-weight: 500;
+font-style: oblique;
+color: var(--colorLemon);
 }
 
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
@@ -246,24 +232,60 @@ header.masthead .header-content h1 {
   font-size: 30px;
 }
 
-/* header.masthead .device-container {
-  max-width: 325px;
-  margin-right: auto;
-  margin-left: auto;
-} */
+.headerName {
+  width: 45vw;
+  top: 150px; 
+  left: 370px;
+  position: relative;
+  text-align: left;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+}
 
-/* header.masthead .device-container .screen img {
-  border-radius: 3px;
-} */
+.headerName h1 {
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--colorPurple);
+  text-shadow: 3px 3px var(--fontvintage);
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  line-height: normal;
+}
 
+.headerIntro {
+  width: 45vw;
+  top: 140px; 
+  left: 370px;
+  position: relative;
+  text-align: left;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+}
 
-/* 2.3 container for about me, portfolio and contact sections */
+.headerIntro p {
+  color: var(--colorPurple);
+  text-shadow: 2px 2px var(--colorGreyLight);
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 2rem;
+}
+
 
 /* main {
   width: 100%;
 } */
 
-/* 2.4 Hero header ============= */
+
+/* ============================= 
+3 Main Body Sections  
+============================= */
+
+
+/* 3.0 Sectioms structures ============= */
 
 section {
   position: relative;
@@ -287,26 +309,29 @@ section {
 
 .flex_item_left {
   display: flex;
-  /* width: 20vw;  */
   position: relative;
-  justify-content: flex-end;
-  /* padding-top: 3rem; */
-  padding-right: 2rem;
+  justify-content: center;
   border-right: solid  0.5rem var(--fontvintage);
 }
+
+.flex_item_left h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 
 .flex_item_right {
   display: flex;
   flex-wrap: wrap;
-  /* width: 80vw; */
   justify-content: left; 
-  /* padding-top: 3rem; */
   padding-left: 2rem;
   padding-right: 5rem;
 }
 
 
-/* Section ONE Top  */
+/* 3.1 Section ONE Top ============= */
+
 section.firstSection {
   padding-top: 70px;
   padding-bottom: 5px;
@@ -333,7 +358,7 @@ section.firstSectionFadeOut {
 }
 
 
-/* Section TWO  */
+/* 3.2 Section TWO  ============= */
 
 section.secondSection {
   padding-bottom: 5px;
@@ -359,7 +384,7 @@ section.secondSectionFadeOut {
     );
 }
 
-/* Section THREE  */
+/* 3.3 Section THREE  ============= */
 
 section.thirdSection {
   padding-bottom: 5px;
@@ -385,7 +410,7 @@ section.thirdSectionFadeOut {
     );
 }
 
-/* Section FOUR  */
+/* 3.4 Section FOUR  ============= */
 
 section.fourthSection {
   padding-bottom: 5px;
@@ -412,8 +437,93 @@ section.fourthSectionFadeOut {
 }
 
 
-/* CONTACT ME Section */
+/* 3.5 Portfolio flex  ============= */
 
+h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+#portfolio {
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.portfolio1, .portfolio2, .portfolio3, .portfolio4, .portfolio5 {
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+border: groove  0.5rem var(--fontvintage);
+/* box-shadow: 5px 0 20px var(--bgcolordark); */
+}
+
+.portfolio1 {
+background-image: url("../images/webdeveloper_peiwang_teanamu_dot_com.jpg");
+}
+
+.portfolio2 {
+background-image: url("../images/webdeveloper_peiwang_tokei_applewatch_app.png");
+}
+
+.portfolio3 {
+background-image: url("../images/webdeveloper_peiwang_potterySchool.png");
+}
+.portfolio4 {
+background-image: url("../images/webdeveloper_peiwang_patisseriesshop.png");
+}
+.portfolio5 {
+background-image: url("../images/webdeveloper_peiwang_mamebonsai.png");
+}
+
+.portfolio_flex {
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.portfolio_flex_item {
+display: flex;
+align-items: flex-end;
+flex-basis: calc(50% - 1em);
+margin: 0.5em;
+min-height: 150px;
+/* background-color: var(--color5); */
+padding: 10px;
+}
+
+.portfolio_flex div {
+background-color: var(--colorGreen);
+padding: 10px;
+margin: 0;
+padding-bottom: 0px;
+color: var(--fontvintage);
+font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.portfolio_flex_item:first-child {
+min-height: 300px;
+flex-basis: 100%;
+}
+
+.portfolio_flex_item a.link,
+.portfolio_flex_item a.visited,
+.portfolio_flex_item a.hover,
+.portfolio_flex_item a.active {
+cursor: grab;
+text-decoration: none;
+}
+
+.col-sm-12 .flex_items:first-child {
+  min-height: 300px;
+  flex-basis: 100%;
+}
+
+
+/* 3.6 Contact me  ============= */
 
 .avatar {
   width: 170px;
@@ -504,6 +614,13 @@ form {
   transform: translateY(4px);
 }
 
+/* 3.7 About Me ============= */
+.opener {
+  font-weight: bolder;
+  font-size: larger;
+  color: var(--colorLemon);
+}
+
 
 
 
@@ -522,7 +639,9 @@ section.footerNav {
 }
 
 
-/* Footer section */
+/* ============================= 
+4 FOOTER  
+============================= */
 
 footer {
   max-width: 100%;
