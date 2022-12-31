@@ -271,7 +271,8 @@ header.masthead .header-content h1 {
   padding: 0;
   margin: 0;
   text-align: right;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 
