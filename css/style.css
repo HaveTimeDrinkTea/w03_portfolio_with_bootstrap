@@ -210,7 +210,6 @@ color: var(--colorLemon);
 header.masthead {
   position: relative;
   width: 100vw;
-  height: 100%; /* added after index2*/
   padding-top: 70px; /* 150px */
   padding-bottom: 5px;
   color: var(--fontvintage);
@@ -656,10 +655,13 @@ form {
   background-color: var(--colorOrange);
   border: solid 1px var(--fontvintage);
   border-radius: 8px;
-  box-shadow: 2px 4px var(--colorTealDarker);
 }
 
-.button:hover {background-color: var(--colorElectricBlue)}
+.button:hover {
+  background-color: var(--colorElectricBlue);
+  box-shadow: 6px 6px var(--colorTealDarker);
+
+}
 
 .button:active {
   background-color: var(--colorGreen);
@@ -735,3 +737,35 @@ section.footerNav {
 }
 
 
+
+footer .footerNav a {
+  font-size: 1rem;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 2px;
+  border: 0;
+  color: var(--colorWheat);
+}
+
+footer .footerNav a.active {
+  color: var(--colorRed) !important;
+  border: 0;
+  background-color: transparent;
+}
+
+footer .footerNav a.active:hover {
+  color: var(--colorRed);
+  background-color: transparent;
+}
+
+footer .footerNav a,
+footer .footerNav a:focus {
+  color: var(--colorWheat);
+}
+
+footer .footerNav a:hover,
+footer .footerNav a:focus:hover {
+  color: var(--colorRed);
+}
