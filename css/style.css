@@ -314,12 +314,15 @@ section {
   position: relative;
   justify-content: center;
   border-right: solid  0.5rem var(--fontvintage);
+  border-top: solid  0.5rem var(--fontvintage);
 }
 
 .flex_item_left h2 {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
+  padding-top: 1rem;
+  padding-right: 1rem;
 }
 
 
@@ -445,6 +448,16 @@ h3 {
   text-transform: uppercase;
   font-size: 1.5rem;
   text-align: left;
+}
+
+.portfolioImage2 {
+  width: 375px;
+  height: 251px;
+}
+
+.portfolioImage {
+  width: 250px;
+  height: 166px;
 }
 
 #portfolio {
@@ -575,6 +588,11 @@ text-decoration: none;
   background-color:  #fc9cb4;
 }
 
+.bgRed {
+  background-color: var(--colorRed);
+}
+
+
 /* 3.7 Contact me Section ============= */
 
 .avatar {
@@ -642,31 +660,32 @@ form {
   padding-bottom: 2rem;
 }
 
-.button {
+.buttonPW {
   display: inline-block;
   padding: 10px;
   margin: 10px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: auto;
   color: var(--fontvintage);
-  background-color: var(--colorOrange);
+  background-color: var(--colorGreen);
   border: solid 1px var(--fontvintage);
   border-radius: 8px;
 }
 
-.button:hover {
+.buttonPW:hover {
   background-color: var(--colorElectricBlue);
   box-shadow: 6px 6px var(--colorTealDarker);
-
+  color: var(--fontvintage);
 }
 
-.button:active {
+.buttonPW:active {
   background-color: var(--colorGreen);
   box-shadow: 0 5px var(--colorTealDarker2);
   transform: translateY(4px);
+  color: var(--fontvintage);
 }
 
 /* 3.8 About Me ============= */
