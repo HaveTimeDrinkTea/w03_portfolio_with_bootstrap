@@ -1,5 +1,6 @@
 # remove unwanted files
 **/.DS_Store
+**/.vscode
 
 # Logs
 logs
