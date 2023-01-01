@@ -1,4 +1,4 @@
-# remove unwanted files
+# remove unwanted directories and files
 **/.DS_Store
 **/.vscode
 
