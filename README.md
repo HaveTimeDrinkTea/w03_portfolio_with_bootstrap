@@ -3,34 +3,27 @@
 
 ## Description
 
-This project is part of the Frontend Dev Bootcamp course challenge for week 3. It requires us to (re)create (from our week 2 challenge) a portfoliio web page using bootstrap css. The Bootstrap
+This project is part of the Frontend Dev Bootcamp course challenge for week 3. It requires us to (re)create (from our week 2 challenge) a portfoliio web page using bootstrap css. Bootstrap version 4.6 is used in this project.
 
-This week, we learnt (and had lots of fun) with CSS Flexbox and Grids. We also learnt the concept of wire-framing (which was a process I used to do on pencil and paper). 
+This week, we learnt about the wonders of Bootstrap. Through this project, I have an opportunity to demonstrate my ability to recreate a webpage using Bootstrap. I have also anchored my understanding of HTML/CSS, the git workflow, github, terminal commands, VSCode, editing a markdown document and debuging using browser developer mode. I have also had a lot of fun researching and creating artwork using CSS and CSS animation functionalities.  
 
-Through this project, I have an opportunity to demonstrate my understanding of HTML/CSS, the git workflow, github, terminal commands, VSCode, editing a markdown document and debuging using browser developer mode. I have also had a lot of fun playing with CSS flexbox and animation functionality.  
-
-I have learnt that I need to have an even more comprehensive wire-framing right down to the details of the naming for the major flex box containers, items and the transition of the webpage from a large screen to small(er) screens. I have also learnt the importance of understanding behaviours of different browsers as some of the animations did not work on Mac/iOS/iPadOS Safari browser nor did it work on iOS/iPadOS Chrome browser. I think this is extremely important for designing a responsive website with a target user in mind.
-
-This project takes the "mobile last" approach as it is anticipated that recruiting agents are more likely to be using a laptop/desktop or a larger tablet than on a mobile.
-
-We were given 1 less day to complete this week's challenge owing to the pending Christmas break. So I had to manage my time properly. I also need further readings about accessibility in web design and browser compatibiliity.
+As with the last project, this project takes the "mobile last" approach as it is anticipated that recruiting agents are more likely to be using a laptop/desktop or a larger tablet than on a mobile. But using Bootstrap makes it so much easier.
 
 Other than the first project listed in the portfolio section of my webpage, the rest of the projects are all fictitious or website / apps that I would love to have made. 
 
 
 ### Wireframe of this Portfolio Showcase Webpage
 
-![Wireframe image for this webpage](assets/images/wire_frame_peiwang_portfolio_webpage.png)
+![Wireframe image for this webpage - Refer to previous week's project](https://github.com/HaveTimeDrinkTea/w02_challenge_portfolio_showcase)
 
 
 
 ### Methodology
 
+* Redeisgn the Jumbotron area.
+* Create the main HTML structure using a bootstrap starting template.
+* Create all the necessary css (in various .css files if necessary)
 * Make the changes and follow a git workflow.
-* Make a wireframe design for large screen and smaller tablets and mobile screens. This should identify:
-  ** all the css flexboxes, their properties/values, 
-  ** how they will trasition from big screen to small screens and
-  ** all the accessiblity issues relating to the webpage and all its transitions required for making the website responsive. 
 * Provide content for copy writings and images for the projects.
 
 
@@ -40,8 +33,6 @@ Other than the first project listed in the portfolio section of my webpage, the 
 * Update all the links with real links.
 * Implement cookie consent and check compliance with GDPR.
 * Create the script(s) need to collect email leads from the contact me section.
-* Smooth out the current transition from larger screens to smaller screen vice versa.
-* Use of svg image animation in different browsers.
 
 
 
@@ -51,7 +42,7 @@ AS A new frontend developer
 I WANT an online portfolio that follows accessibility standards and SEO
 SO THAT potential hiring agents can look at previous work and be impressed enough to contact me.
 
-[Deployment link](https://havetimedrinktea.github.io/w02_challenge_portfolio_showcase/)
+[Deployment link](https://havetimedrinktea.github.io/w03_portfolio_with_bootstrap/)
 
 
 ## Acceptance Criteria
