@@ -13,7 +13,7 @@
   --colorWheat80: rgba(245,222,179, 0.8);
   --colorRed: #cd071e;
   --colorRed70: rgb(205, 7, 30, 0.7);
-  --colorGreenTEST: rgb(110, 139, 116);
+  --colorGreenPale: rgb(110, 139, 116);
   --colorGreenTEST50: rgba(150, 194, 78, 0.5);
   --colorGreenTEST70: rgba(150, 194, 78, 0.7);
   --colorGreen: rgba(84, 132, 52, 1);
@@ -155,7 +155,7 @@ section h2 {
 }
 
 #mainNav .navbar-brand .namePronoun {
-font-size: 0.5rem;
+font-size: 0.7rem;
 font-weight: 500;
 font-style: oblique;
 color: var(--colorLemon);
@@ -592,6 +592,14 @@ text-decoration: none;
   background-color: var(--colorRed);
 }
 
+.bgTealPale {
+  background-color: var(--colorGreenPale);
+}
+
+.bgBrownDark {
+  background-color: var(--colorBrownDark);
+}
+
 
 /* 3.7 Contact me Section ============= */
 
@@ -677,13 +685,13 @@ form {
 
 .buttonPW:hover {
   background-color: var(--colorElectricBlue);
-  box-shadow: 6px 6px var(--colorTealDarker);
+  box-shadow: 3px 3px var(--colorTealLighter);
   color: var(--fontvintage);
 }
 
 .buttonPW:active {
   background-color: var(--colorGreen);
-  box-shadow: 0 5px var(--colorTealDarker2);
+  box-shadow: 0 4px var(--colorTealLighter);
   transform: translateY(4px);
   color: var(--fontvintage);
 }
