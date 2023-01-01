@@ -111,7 +111,7 @@ A screen shots of the submitted webpage on different screen sizes:
 * Used Bootstrap V.4.6.
 * Used Font Awesome v4.7. [Link to Font Awesome](https://fontawesome.com).
 * Webpage colour scheme RGB take from [Link to site](http://khroma.co/generator/).
-* Modified the code of the "CSS Only Morphing Blob" by Monica Dincule and used modified animation on this web page. [CSS Only Morphing Blob Demo](https://codepen.io/notwaldorf/pen/omXwzw)
+* Modified the code of the Chinese Circular Frames CSS by Ye Yiyi (叶一一) and used the modified animation on this web page. [CSS Only Morphing Blob Demo](https://juejin.cn/post/7143499534025359374)
 
 
 
@@ -124,12 +124,10 @@ MIT License
 ## Features
 
 * Web page to showcase 
-  ** my design aesthetic and knowledge of HTML/CSS
+  ** my design aesthetic and knowledge of HTML/CSS using Bootstrap
   ** my (future) project porfolio 
 * As the header section includes some css animation, I've added @media (prefers-reduced-motion: reduce) to honour devices with reduced motion settings.
-* CSS animations in the header section (does not work on macOS Ventura / iPaadOs / iOS safari).  Tested and worked in Google Chrome
-* CSS animation in profile avatar in the contact me section.
-	
+
 
 	
 	
