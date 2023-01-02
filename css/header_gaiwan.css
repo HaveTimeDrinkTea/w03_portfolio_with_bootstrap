@@ -2,27 +2,21 @@
 /* 2.? Gaiwan and animations ============= */
 /* CSS for gaiwan & animations  */
 .container_gaiwan {
-    position: relative;
-    top: 0vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
     max-width: 40vw;
     max-height: 40vh;
   }
 
-.container_gaiwan p {
-  font-size: 2rem;
-  position: relative;
-  top: 100px;
-  left: 100px;
-  color: var(--colorTealLighter);
-  text-align: center;
-}
+
 
   
   /* ##Gaiwan (A) saucer  */
   .container_gaiwan .saucer {
     position: relative;
-    bottom: -200px;
-    right: -230px;
+    top: 325px;
+    right: -310px;
     transform: translateX(-50%);
     width: 200px;
     height: 75px;
@@ -60,8 +54,8 @@
   
   .container_gaiwan .gaiwan {
     position: relative;
-    top: 60px;
-    right: -160px;
+    top: 180px;
+    right: -240px;
     width: 140px;
     height: 115px;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
