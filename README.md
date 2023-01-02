@@ -3,9 +3,9 @@
 
 ## Description
 
-This project is part of the Frontend Dev Bootcamp course challenge for week 3 "UX and Advance CSS Bootstrap Portfolio". It requires us to (re)create (from our week 2 challenge) a portfoliio web page using bootstrap css. Bootstrap version 4.6 is used in this project.
+This project is part of the Frontend Dev Bootcamp course challenge for week 3 "UX and Advance CSS Bootstrap Portfolio". It requires us to (re)create (from our week 2 challenge) a portfolio web page using Bootstrap css. Bootstrap version 4.6 is used in this project.
 
-This week, we learnt about the wonders of Bootstrap. Through this project, I have an opportunity to demonstrate my ability to recreate a webpage using Bootstrap. I have also anchored my understanding of HTML/CSS, the git workflow, github, terminal commands, VSCode, editing a markdown document and debuging using browser developer mode. I have also had a lot of fun researching and creating artwork using CSS and CSS animation functionalities.  
+This week, we learnt about the wonders of Bootstrap. Through this project, I have an opportunity to demonstrate my ability to recreate a webpage using Bootstrap. I have also anchored my understanding of HTML/CSS, the git workflow, github, terminal commands, VSCode, editing a markdown document and debuging using browser developer mode. I have also had a lot of fun researching and creating artwork using CSS and CSS animation functionalities. 
 
 As with the last project, this project takes the "mobile last" approach as it is anticipated that recruiting agents are more likely to be using a laptop/desktop or a larger tablet than a mobile. Bootstrap makes it so much easier to make the webpage responsive.
 
@@ -14,13 +14,13 @@ Other than the first project listed in the portfolio section of my webpage, the 
 
 ### Wireframe of this Portfolio Showcase Webpage
 
-![Wireframe image for this webpage - Refer to previous week's project](https://github.com/HaveTimeDrinkTea/w02_challenge_portfolio_showcase)
+[Refer to previous week's project](https://github.com/HaveTimeDrinkTea/w02_challenge_portfolio_showcase)
 
 
 
 ### Methodology
 
-* Redeisgn the Jumbotron area.
+* Redesign the Jumbotron / Hero area.
 * Create the main HTML structure using a bootstrap starting template.
 * Create all the necessary css (in various .css files if necessary)
 * Make the changes and follow a git workflow.
@@ -39,7 +39,7 @@ Other than the first project listed in the portfolio section of my webpage, the 
 ## User Story
 
 AS A new frontend developer
-I WANT an online portfolio that follows accessibility standards, responsive to various screens and SEO
+I WANT an online portfolio that utlizes Bootstrap CSS and follows accessibility standards, responsive to various screens and SEO
 SO THAT potential hiring agents can look at previous work and be impressed enough to contact me.
 
 [Deployment link](https://havetimedrinktea.github.io/w03_portfolio_with_bootstrap/)
@@ -82,27 +82,18 @@ N.A.
 
 ## Usage 
 
-A screen shots of the submitted webpage on different screen sizes:
+Screen shots of the submitted webpage on different screen sizes:
 
-### Desktop Screen
+### Big Screen
 
-![Deployed Webpage screen dump for big screen top](assets/images/screenshot_big_top.png)
-
-![Deployed Webpage screen dump for big screen middle](assets/images/screenshot_big_middle.png)
+![Deployed Webpage screen dump for big screen top](images/webdeveloper_peiwang_screendump_big.png)
 
 
-### Tablets Screen
 
-![Deployed Webpage screen dump for tablet screen top](assets/images/screenshot_medium_top.png)
+### Mobile / Smaler Tablet Screen
 
-![Deployed Webpage screen dump for tablet screen middle](assets/images/screenshot_medium_middle.png)
+![Deployed Webpage screen dump for tablet screen top](images/webdeveloper_peiwang_screendump_small.png)
 
-
-### Mobile Screem
-
-![Deployed Webpage screen dump for mobile screen top](assets/images/screenshot_small_top.png)
-
-![Deployed Webpage screen dump for mobile  screen middle](assets/images/screenshot_small_middle.png)
 
 
 ## Credits
@@ -111,7 +102,7 @@ A screen shots of the submitted webpage on different screen sizes:
 * Used Bootstrap V.4.6.
 * Used Font Awesome v4.7. [Link to Font Awesome](https://fontawesome.com).
 * Webpage colour scheme RGB take from [Link to site](http://khroma.co/generator/).
-* Modified the code of the Chinese Circular Frames CSS by Ye Yiyi (叶一一) and used the modified animation on this web page. [CSS Only Morphing Blob Demo](https://juejin.cn/post/7143499534025359374)
+* Modified the code of the Chinese Circular Frames CSS design by Ye Yiyi (叶一一) and used the modified animation on this web page. [CSS Only Morphing Blob Demo](https://juejin.cn/post/7143499534025359374)
 
 
 
@@ -136,10 +127,3 @@ MIT License
 The new webpage will be assessed against download speed and accessibility at a later date. 
 
 
-
----
-
-## Badges
-
-![bathmath](https://img.shields.io/badge/Memo%20League-Golden-yellow)
-![bathmath](https://img.shields.io/badge/SoloLearn%20League-Mars-red)
