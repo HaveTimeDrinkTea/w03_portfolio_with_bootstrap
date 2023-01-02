@@ -264,11 +264,12 @@ header.masthead .header-content h1 {
 
 .headerIntro p {
   color: var(--colorPurple);
-  text-shadow: 2px 2px var(--colorGreyLight);
+  text-shadow: 2px 2px var(--fontvintage);
   padding: 0;
   margin: 0;
   text-align: left;
   font-size: 2.3rem;
+  font-weight: bolder;
   text-transform: uppercase;
 }
 
@@ -314,6 +315,8 @@ header.masthead .header-content h1 {
   text-align: left;
   padding-bottom: 2rem;
   font-size: 2.4rem;  
+  color: var(--colorElectricBlue)
+
 }
 
 #contact_content_form_p {
@@ -323,6 +326,7 @@ header.masthead .header-content h1 {
   text-align: left;
   padding-bottom: 2.2rem;
   font-size: 1.5rem;  
+  color: var(--colorElectricBlue)
 }
 
 #contact_gaiwan_form {
@@ -336,6 +340,7 @@ header.masthead .header-content h1 {
 
 .disclaimer_contact_gaiwan {
   width: 200px;
+  color: var(--colorElectricBlue)
 }
 
 /* ============================= 
