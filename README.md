@@ -102,7 +102,7 @@ Screen shots of the submitted webpage on different screen sizes:
 * Used Bootstrap V.4.6.
 * Used Font Awesome v4.7. [Link to Font Awesome](https://fontawesome.com).
 * Webpage colour scheme RGB take from [Link to site](http://khroma.co/generator/).
-* Modified the code of the Chinese Circular Frames CSS design by Ye Yiyi (叶一一) and used the modified animation on this web page. [CSS Only Morphing Blob Demo](https://juejin.cn/post/7143499534025359374)
+* Modified the code of the Chinese Circular Frames CSS design by Ye Yiyi (叶一一) and used the modified animation on this web page. [URL to Chinese Circular Frame CSS design by Ye Yiyi](https://juejin.cn/post/7143499534025359374)
 
 
 
