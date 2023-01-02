@@ -10,9 +10,9 @@
 
 .container_gaiwan p {
   font-size: 2rem;
-  position: relative;
-  top: 100px;
-  left: 100px;
+  position: absolute;
+  top: 280px; /*100px*/
+  left: 70px; /*70px*/
   color: var(--colorTealLighter);
   text-align: center;
 }

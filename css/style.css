@@ -287,7 +287,7 @@ main {
   width: 100vw;
 }
 
-/* 3.0 Sectioms structures ============= */
+/* 3.0 Sections structures ============= */
 
 section {
   position: relative;
@@ -306,7 +306,6 @@ section {
 .container_section {
   padding-top: 5rem;
 }
-
 
 
 .flex_item_left {
@@ -450,11 +449,6 @@ h3 {
   text-align: left;
 }
 
-.portfolioImage2 {
-  width: 375px;
-  height: 251px;
-}
-
 .portfolioImage {
   width: 250px;
   height: 166px;
@@ -467,75 +461,9 @@ justify-content: center;
 flex-wrap: wrap;
 }
 
-.portfolio1, .portfolio2, .portfolio3, .portfolio4, .portfolio5 {
-background-size: cover;
-background-position: center;
-border-radius: 15px;
-border: groove  0.5rem var(--fontvintage);
-/* box-shadow: 5px 0 20px var(--bgcolordark); */
-}
 
-.portfolio1 {
-background-image: url("../images/webdeveloper_peiwang_teanamu_dot_com.jpg");
-}
 
-.portfolio2 {
-background-image: url("../images/webdeveloper_peiwang_tokei_applewatch_app.png");
-}
 
-.portfolio3 {
-background-image: url("../images/webdeveloper_peiwang_potterySchool.png");
-}
-.portfolio4 {
-background-image: url("../images/webdeveloper_peiwang_patisseriesshop.png");
-}
-.portfolio5 {
-background-image: url("../images/webdeveloper_peiwang_mamebonsai.png");
-}
-
-.portfolio_flex {
-display: flex;
-flex-direction: row;
-justify-content: center;
-flex-wrap: wrap;
-}
-
-.portfolio_flex_item {
-display: flex;
-align-items: flex-end;
-flex-basis: calc(50% - 1em);
-margin: 0.5em;
-min-height: 150px;
-/* background-color: var(--color5); */
-padding: 10px;
-}
-
-.portfolio_flex div {
-background-color: var(--colorGreen);
-padding: 10px;
-margin: 0;
-padding-bottom: 0px;
-color: var(--fontvintage);
-font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
-}
-
-.portfolio_flex_item:first-child {
-min-height: 300px;
-flex-basis: 100%;
-}
-
-.portfolio_flex_item a.link,
-.portfolio_flex_item a.visited,
-.portfolio_flex_item a.hover,
-.portfolio_flex_item a.active {
-cursor: grab;
-text-decoration: none;
-}
-
-.col-sm-12 .flex_items:first-child {
-  min-height: 300px;
-  flex-basis: 100%;
-}
 
 
 /* 3.6 Skills Section  ============= */
@@ -795,4 +723,15 @@ footer .footerNav a:focus {
 footer .footerNav a:hover,
 footer .footerNav a:focus:hover {
   color: var(--colorRed);
+}
+
+/* ===============================================================
+Media Queries for various screen sizes
+=============================================================== */
+
+/* using media queries to honour devices which prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  header.masthead, #blob_container {
+    animation: fade 0.5s ease-in both;
+  }
 }
