@@ -243,7 +243,7 @@ header.masthead .header-content h1 {
 .headerName h1 {
   font-size: 6rem;
   font-weight: 400;
-  color: var(--colorPurple);
+  color: var(--colorElectricBlue);
   text-shadow: 3px 3px var(--fontvintage);
   margin: 0;
   padding: 0;
@@ -263,7 +263,7 @@ header.masthead .header-content h1 {
 }
 
 .headerIntro p {
-  color: var(--colorPurple);
+  color: var(--colorElectricBlue);
   text-shadow: 2px 2px var(--fontvintage);
   padding: 0;
   margin: 0;
