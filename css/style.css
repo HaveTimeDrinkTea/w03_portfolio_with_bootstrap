@@ -287,8 +287,8 @@ header.masthead .header-content h1 {
 
 .container_g_contact {
   display: flex;
-  position: relative;
-  top: 0px;
+  position: absolute;
+  top: -70px; /* top and left 0px*/
   left: 0px;
   padding-left: 0px;
   margin-left: 0px;  
@@ -298,7 +298,8 @@ header.masthead .header-content h1 {
 #contact_content_gaiwan_p {
   font-size: 1.5rem;
 }
- #contact_gaiwan_form {
+
+#contact_gaiwan_form {
   position: relative;
   top: 0px;
   text-align: left;
@@ -375,7 +376,7 @@ section {
 }
 
 .flex_item_left h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -520,7 +521,13 @@ justify-content: center;
 flex-wrap: wrap;
 }
 
+.portfolio_project_title {
+  font-size: 4rem;
+}
 
+.portfolio_project_skills {
+  font-size: 1.8rem;
+}
 
 
 
@@ -528,7 +535,7 @@ flex-wrap: wrap;
 /* 3.6 Skills Section  ============= */
 
 .awesomeFontIcon {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .bgHTML5 {
