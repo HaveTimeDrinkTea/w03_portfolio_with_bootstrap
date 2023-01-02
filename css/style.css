@@ -73,6 +73,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -114,7 +115,7 @@ h6 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -123,9 +124,6 @@ section {
   padding: 100px 0;
 }
 
-section h2 {
-  font-size: 50px;
-}
 
 
 
@@ -148,14 +146,14 @@ section h2 {
 #mainNav .navbar-brand {
   color: var(--colorCharcoal);
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand .namePronoun {
-font-size: 0.7rem;
+font-size: 1.1rem;
 font-weight: 500;
 font-style: oblique;
 color: var(--colorLemon);
@@ -166,7 +164,7 @@ color: var(--colorLemon);
 }
 
 #mainNav .navbar-toggler {
-  font-size: 30px;
+  font-size: 3rem;
   padding: 8px 10px;
   color:var(--colorLemon);; 
   font-weight: 500;
@@ -175,14 +173,13 @@ color: var(--colorLemon);
 }
 
 #mainNav .navbar-nav > li > a {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: right;
   padding-right: 2px;
   border: 0;
-  /* background-color: var(--colorTealLighter); */
   opacity: 70%; 
 }
 
@@ -203,7 +200,7 @@ color: var(--colorLemon);
 
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
-  color: #fdcc52; /* ;*/
+  color: #fdcc52;
 }
 
 /* 2.2 Hero header ============= */
@@ -229,13 +226,13 @@ header.masthead .header-content {
 }
 
 header.masthead .header-content h1 {
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .headerName {
   width: 45vw;
   top: 150px; 
-  left: 370px;
+  left: 450px;
   position: relative;
   text-align: left;
   z-index: 999;
@@ -244,7 +241,7 @@ header.masthead .header-content h1 {
 }
 
 .headerName h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 400;
   color: var(--colorPurple);
   text-shadow: 3px 3px var(--fontvintage);
@@ -255,10 +252,10 @@ header.masthead .header-content h1 {
 }
 
 .headerIntro {
-  width: 45vw;
-  top: 140px; 
-  left: 370px;
   position: relative;
+  width: 45vw; /*45vw*/
+  top: 140px;  /*140px*/
+  left: 390px; /*370px*/
   text-align: left;
   z-index: 999;
   margin: 0;
@@ -270,14 +267,75 @@ header.masthead .header-content h1 {
   text-shadow: 2px 2px var(--colorGreyLight);
   padding: 0;
   margin: 0;
-  text-align: right;
-  font-size: 1.6rem;
+  text-align: left;
+  font-size: 2.3rem;
   text-transform: uppercase;
 }
 
+.container_gaiwan_contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: first baseline;
+  column-gap: 0px;
+  row-gap: 0px;
+  position: absolute;
+  top: 260px;
+  left: 0px;
+}
+
+.container_g_contact {
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-left: 0px;
+  margin-left: 0px;  
+}
 
 
+#contact_content_gaiwan_p {
+  font-size: 1.5rem;
+}
+ #contact_gaiwan_form {
+  position: relative;
+  top: 0px;
+  text-align: left;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
 
+#contact_content_form_header {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  text-align: left;
+  padding-bottom: 2rem;
+  font-size: 2.4rem;  
+}
+
+#contact_content_form_p {
+  position: relative;
+  top: 60px;
+  left: -195px;
+  text-align: left;
+  padding-bottom: 2.2rem;
+  font-size: 1.5rem;  
+}
+
+#contact_gaiwan_form {
+  position: relative;
+  top: 10px;
+  left: -195px;
+  text-align: left;
+  padding-bottom: 2.2rem;
+  font-size: 1.5rem;    
+}
+
+.disclaimer_contact_gaiwan {
+  width: 200px;
+}
 
 /* ============================= 
 3 Main Body Sections  
@@ -317,11 +375,12 @@ section {
 }
 
 .flex_item_left h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   padding-top: 1rem;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
 }
 
 
@@ -578,11 +637,6 @@ flex-wrap: wrap;
   margin-left: 50px;
 }
 
-.opener {
-  font-weight: bolder;
-  font-size: larger;
-  color: var(--color1);
-}
 
 .disclaimer {
   font-size: 0.7em;
@@ -594,13 +648,14 @@ flex-wrap: wrap;
 form {
   text-align: left;
   padding-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .buttonPW {
   display: inline-block;
   padding: 10px;
   margin: 10px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -671,7 +726,7 @@ section.footerNav {
 
 
 .footmsg {
-  font-size: 1.5rem;
+  font-size: 2rem;
   top: 2rem;
   bottom: 2rem;
   text-align: center;
@@ -681,20 +736,20 @@ section.footerNav {
 
 .footerP {
   color: var(--colorWheat);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-style: italic;
 }
 
 .footerTags {
   color: var(--colorPink);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 
 
 footer .footerNav a {
-  font-size: 1rem;
+  font-size: 1.8rem;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
